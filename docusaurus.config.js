@@ -16,7 +16,7 @@ const config = {
     trailingSlash: true, //for GitHub
     organizationName: 'avodaq-dev', // Usually your GitHub org/user name.
     projectName: 'rescoped-site', // Usually your repo name.
-    deploymentBranch: 'main',
+    deploymentBranch: 'gh-pages',
 
     presets: [
         [
