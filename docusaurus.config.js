@@ -8,13 +8,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: 'rescoped',
     tagline: 'Advanced tooling for cutting edge engineers',
-    url: 'https://www.rescoped.io',
-    baseUrl: '/',
-    onBrokenLinks: 'log',
+    url: 'https://avodaq-dev.github.io',
+    baseUrl: '/rescoped-site/',
+    onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/fav_re.svg',
-    organizationName: 'rescoped', // Usually your GitHub org/user name.
+    trailingSlash: true, //for GitHub
+    organizationName: 'avodaq-dev', // Usually your GitHub org/user name.
     projectName: 'rescoped-site', // Usually your repo name.
+    deploymentBranch: 'main',
 
     presets: [
         [
