@@ -14,6 +14,7 @@ import {fadeProps} from "@avo/avo-libs/reveal_animations/fadeAnimation";
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
+    console.log('GH actions work');
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
