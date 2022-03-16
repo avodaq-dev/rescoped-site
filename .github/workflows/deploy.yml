@@ -13,11 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/checkout@v3
-        with:
-          repository: avodaq-dev/monorepo
-          # Where to put the cloned repo
-          path: 'monorepo'
+      with:
+        submodules: recursive
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
