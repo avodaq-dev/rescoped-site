@@ -74,29 +74,8 @@ const config = {
                             },
 
                         ],
-                    }, {
-                        label: 'news',
-                        position: 'left',
-                        items: [
-                            {
-                                href: '/blog',
-                                label: 'rescoped',
-                                rel: null,
-                            },
-                            {
-                                href: '/',
-                                label: 'hypernews',
-                                target: '_blank',
-                                rel: null,
-                            }, {
-                                href: '/',
-                                label: 'supernews',
-                                target: '_blank',
-                                rel: null,
-                            },
-
-                        ],
                     },
+                    {to: '#about', label: 'about', position: 'left'},
                     {to: '#contact', label: 'contact', position: 'left'},
                     {
                         href: 'https://github.com/facebook/docusaurus',
