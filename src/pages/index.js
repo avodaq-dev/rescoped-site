@@ -8,7 +8,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import ReLogo from '@site/static/img/re_logo.svg';
 import {Fade} from "react-awesome-reveal";
-import {fadeProps} from "@avo/avo-libs/reveal_animations/fadeAnimation";
+import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation";
 
 
 
