@@ -62,14 +62,20 @@ const config = {
                         position: 'left',
                         items: [
                             {
-                                href: 'https://www.hyper.rescoped.io',
-                                label: 'hyperdocs',
-                                target: '_blank',
+                                href: 'https://avodaq-dev.github.io/hyper-docs/',
+                                label: 'hyperscope',
                                 rel: null,
-                            }, {
-                                href: 'https://www.super.rescoped.io',
-                                label: 'superdocs',
-                                target: '_blank',
+
+                            },
+                            {
+                                href: 'https://avodaq-dev.github.io/hyper-docs/docs/intro/',
+                                label: 'Docs',
+                                rel: null,
+
+                            },
+                            {
+                                href: 'https://avodaq-dev.github.io/hyper-docs/blog/',
+                                label: 'Changelog',
                                 rel: null,
                             },
 
