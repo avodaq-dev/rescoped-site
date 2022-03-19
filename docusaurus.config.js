@@ -63,41 +63,26 @@ const config = {
                         position: 'left',
                         items: [
                             {
-                                href: 'https://www.hyper.rescoped.io',
-                                label: 'hyperdocs',
-                                target: '_blank',
+                                href: 'https://avodaq-dev.github.io/hyper-docs/',
+                                label: 'hyperscope',
                                 rel: null,
-                            }, {
-                                href: 'https://www.super.rescoped.io',
-                                label: 'superdocs',
-                                target: '_blank',
-                                rel: null,
-                            },
 
-                        ],
-                    }, {
-                        label: 'news',
-                        position: 'left',
-                        items: [
-                            {
-                                href: '/blog',
-                                label: 'rescoped',
-                                rel: null,
                             },
                             {
-                                href: '/',
-                                label: 'hypernews',
-                                target: '_blank',
+                                href: 'https://avodaq-dev.github.io/hyper-docs/docs/intro/',
+                                label: 'Docs',
                                 rel: null,
-                            }, {
-                                href: '/',
-                                label: 'supernews',
-                                target: '_blank',
+
+                            },
+                            {
+                                href: 'https://avodaq-dev.github.io/hyper-docs/blog/',
+                                label: 'Changelog',
                                 rel: null,
                             },
 
                         ],
                     },
+                    {to: '#about', label: 'about', position: 'left'},
                     {to: '#contact', label: 'contact', position: 'left'},
                     {
                         href: 'https://github.com/facebook/docusaurus',

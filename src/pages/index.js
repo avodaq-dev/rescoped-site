@@ -11,7 +11,6 @@ import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation";
 
 
-
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     console.log('GH actions work');
@@ -47,6 +46,31 @@ export default function Home() {
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
+
+
+                <section style={{maxWith: 1024, marginTop: 120}}>
+                    <h2 id="about">About</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
+                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
+                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
+                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
+                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
+                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
+                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
+                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
+                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
+                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
+                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
+                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
+                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
+                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
+                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
+                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
+                </section>
             </main>
         </Layout>
     );
