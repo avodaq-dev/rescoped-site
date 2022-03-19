@@ -17,6 +17,7 @@ const config = {
     organizationName: 'avodaq-dev', // Usually your GitHub org/user name.
     projectName: 'rescoped-site', // Usually your repo name.
     deploymentBranch: 'gh-pages',
+    noIndex: true, // Prevent indexing by searchengines
 
     presets: [
         [
