@@ -17,6 +17,7 @@ const config = {
     organizationName: 'avodaq-dev', // Usually your GitHub org/user name.
     projectName: 'rescoped-site', // Usually your repo name.
     deploymentBranch: 'gh-pages',
+    noIndex: true, // Prevent indexing by searchengines
 
     presets: [
         [
@@ -26,8 +27,6 @@ const config = {
                 docs: false,
                 blog: {
                     showReadingTime: true,
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 theme: {
                     customCss: [require.resolve('./src/scss/styles.scss')],
@@ -42,19 +41,20 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            announcementBar: {
-                id: 'support_us',
-                content:
-                    'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
-
-                isCloseable: true,
-            },
+            // announcementBar: {
+            //     id: 'support_us',
+            //     content:
+            //         'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+            //     isCloseable: true,
+            // },
             navbar: {
                 hideOnScroll: true,
                 logo: {
                     alt: 'rescoped logo',
                     src: 'img/re_logo.svg',
                     srcDark: 'img/re_logo_dark.svg',
+                    width: 56,
+                    href: '/'
                 },
                 items: [
                     {
@@ -62,41 +62,26 @@ const config = {
                         position: 'left',
                         items: [
                             {
-                                href: 'https://www.hyper.rescoped.io',
-                                label: 'hyperdocs',
-                                target: '_blank',
+                                href: 'https://avodaq-dev.github.io/hyper-docs/',
+                                label: 'hyperscope',
                                 rel: null,
-                            }, {
-                                href: 'https://www.super.rescoped.io',
-                                label: 'superdocs',
-                                target: '_blank',
-                                rel: null,
-                            },
 
-                        ],
-                    }, {
-                        label: 'news',
-                        position: 'left',
-                        items: [
-                            {
-                                href: '/blog',
-                                label: 'rescoped',
-                                rel: null,
                             },
                             {
-                                href: '/',
-                                label: 'hypernews',
-                                target: '_blank',
+                                href: 'https://avodaq-dev.github.io/hyper-docs/docs/intro/',
+                                label: 'Docs',
                                 rel: null,
-                            }, {
-                                href: '/',
-                                label: 'supernews',
-                                target: '_blank',
+
+                            },
+                            {
+                                href: 'https://avodaq-dev.github.io/hyper-docs/blog/',
+                                label: 'Changelog',
                                 rel: null,
                             },
 
                         ],
                     },
+                    {to: 'blog', label: 'about', position: 'left'},
                     {to: '#contact', label: 'contact', position: 'left'},
                     {
                         href: 'https://github.com/facebook/docusaurus',
