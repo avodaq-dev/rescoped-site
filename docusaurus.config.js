@@ -27,8 +27,6 @@ const config = {
                 docs: false,
                 blog: {
                     showReadingTime: true,
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 theme: {
                     customCss: [require.resolve('./src/scss/styles.scss')],
@@ -43,19 +41,20 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            announcementBar: {
-                id: 'support_us',
-                content:
-                    'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
-
-                isCloseable: true,
-            },
+            // announcementBar: {
+            //     id: 'support_us',
+            //     content:
+            //         'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+            //     isCloseable: true,
+            // },
             navbar: {
                 hideOnScroll: true,
                 logo: {
                     alt: 'rescoped logo',
                     src: 'img/re_logo.svg',
                     srcDark: 'img/re_logo_dark.svg',
+                    width: 56,
+                    href: '/'
                 },
                 items: [
                     {
@@ -82,7 +81,7 @@ const config = {
 
                         ],
                     },
-                    {to: '#about', label: 'about', position: 'left'},
+                    {to: 'blog', label: 'about', position: 'left'},
                     {to: '#contact', label: 'contact', position: 'left'},
                     {
                         href: 'https://github.com/facebook/docusaurus',
