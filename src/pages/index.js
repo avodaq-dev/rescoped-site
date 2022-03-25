@@ -7,9 +7,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import FrontendBackend from '@site/src/components/FrontendBackend';
 import {useColorMode} from '@docusaurus/theme-common';
 
-
 import ReLogoColor from "@avo/monorepo/doku_libs/static/img/rescoped_logo_color.svg";
-import HeaderBG from "@avo/monorepo/doku_libs/static/img/rescoped_bg.gif";
 import ReLogoWhite from "@avo/monorepo/doku_libs/static/img/rescoped_logo_white.svg";
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation";
