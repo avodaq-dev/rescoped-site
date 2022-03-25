@@ -2,37 +2,55 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.scss';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import FrontendBackend from '@site/src/components/FrontendBackend';
+import {useColorMode} from '@docusaurus/theme-common';
 
-import ReLogo from '@site/static/img/re_logo.svg';
+
+import ReLogoColor from "@avo/monorepo/doku_libs/static/img/rescoped_logo_color.svg";
+import HeaderBG from "@avo/monorepo/doku_libs/static/img/rescoped_bg.gif";
+import ReLogoWhite from "@avo/monorepo/doku_libs/static/img/rescoped_logo_white.svg";
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation";
 
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
-    console.log('GH actions work');
+    const {isDarkTheme} = useColorMode();
+    const darkTheme = isDarkTheme ? '' : 'bg-emerald-50';
+    const darkThemehide = isDarkTheme ? 'hidden' : '';
+    const lightThemehide = !isDarkTheme ? 'hidden' : '';
+
     return (
-        <header className={clsx('hero hero--primary', styles.heroBanner)}>
-            <div className="container">
+        <>
+            <header className={clsx('px-4 sm:px-16 py-32', darkTheme)}>
+                <div className="flex flex-col gap-4">
 
-                <Fade {...fadeProps}>
-                    <ReLogo title="Docusaurus Logo" className="logo"/>
-                    <h1 className="hero__title">{siteConfig.title}</h1>
-                    <p className="hero__subtitle">{siteConfig.tagline}</p>
-                    <div className={styles.buttons}>
-                        <Link
-                            className="button button--secondary button--lg"
-                            to="/docs/intro">
-                            Docusaurus Tutorial - 5min ⏱️
-                        </Link>
-                    </div>
-                </Fade>
+                    <Fade {...fadeProps}>
+                        <h1>
+                            <ReLogoColor width="288" title="rescoped Logo" className={clsx('logo ', darkThemehide)}/>
+                            <ReLogoWhite width="288" title="rescoped Logo" className={clsx('logo', lightThemehide)}/>
 
-            </div>
-        </header>
+                        </h1>
+                        <p className="text-3xl font-bold mb-4">{siteConfig.tagline}</p>
+                        <div className='flex gap-4'>
+                            <Link
+                                className="bg-emerald-400 text-white hover:text-white hover:bg-indigo-900 transition px-8 py-4 font-bold text-xl rounded-md"
+                                to="#fontend-solutions">
+                                Frontend
+                            </Link>
+                            <Link
+                                className="bg-emerald-400 text-white hover:text-white hover:bg-indigo-900 transition px-8 py-4 font-bold text-xl rounded-md"
+                                to="#backend-solutions">
+                                Backend
+                            </Link>
+                        </div>
+                    </Fade>
+
+                </div>
+            </header>
+        </>
 
     );
 }
@@ -43,34 +61,12 @@ export default function Home() {
         <Layout
             title={`${siteConfig.title}`}
             description="Description will go into a meta tag in <head />">
+            <Head>
+                <script src="https://cdn.tailwindcss.com"></script>
+            </Head>
             <HomepageHeader/>
             <main>
-                <HomepageFeatures/>
-
-
-                <section style={{maxWith: 1024, marginTop: 120}}>
-                    <h2 id="about">About</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
-                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
-                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
-                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
-                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
-                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
-                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
-                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
-                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
-                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
-                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
-                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
-                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at, corporis cum
-                        cumque debitis ducimus eligendi, error et id ipsa maiores minus modi molestias nemo optio,
-                        possimus praesentium quaerat reprehenderit tempora tempore tenetur totam velit voluptatem
-                        voluptatibus. A accusantium amet est facere iusto neque officiis rem ut, vitae voluptas!</p>
-                </section>
+                <FrontendBackend/>
             </main>
         </Layout>
     );
