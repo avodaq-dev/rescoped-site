@@ -15,7 +15,7 @@
     "symlink": "sh symlink_libs.sh"
   },
   "dependencies": {
-    "@avo/monorepo": "avodaq-dev/monorepo",
+    "@avo/monorepo": "git://github.com/avodaq-dev/monorepo.git#main",
     "@docusaurus/core": "2.0.0-beta.16",
     "@docusaurus/preset-classic": "2.0.0-beta.16",
     "@mdx-js/react": "^1.6.22",
