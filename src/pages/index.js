@@ -2,7 +2,6 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import FrontendBackend from '@site/src/components/FrontendBackend';
 import {useColorMode} from '@docusaurus/theme-common';
@@ -59,9 +58,6 @@ export default function Home() {
         <Layout
             title={`${siteConfig.title}`}
             description="Description will go into a meta tag in <head />">
-            <Head>
-                <script src="https://cdn.tailwindcss.com"></script>
-            </Head>
             <HomepageHeader/>
             <main>
                 <FrontendBackend/>
