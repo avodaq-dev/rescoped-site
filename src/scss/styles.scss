@@ -10,6 +10,6 @@
   --ifm-footer-background-color: var(--ifm-color-primary-light);
 }
 [data-theme='dark'] {
-  @include theme.avo-green-dark;
+  @include theme.avo-green-light;
   --ifm-footer-background-color: var(--ifm-color-primary);
 }
