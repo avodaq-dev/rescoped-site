@@ -1,4 +1,4 @@
-const { colors } = require('~@avo/monorepo/doku_libs/configs/tailwind.colors');
+const { colors } = require('./node_modules/@avo/monorepo/doku_libs/configs/tailwind.colors');
 
 
 module.exports = {
