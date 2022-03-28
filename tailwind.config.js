@@ -1,3 +1,6 @@
+const { colors } = require('@avo/monorepo/doku_libs/configs/tailwind.colors');
+
+
 module.exports = {
     content: [
         "./src/**/*.{js,jsx,ts,tsx}",
@@ -5,7 +8,9 @@ module.exports = {
         "./docs/**/*.{md,mdx}"
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors,
+        },
     },
     plugins: [],
 };
