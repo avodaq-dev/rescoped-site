@@ -5,11 +5,11 @@
 
 // colors
 :root {
-  @include theme.avo-green-light;
+  @include theme.avo-green;
   --ifm-footer-color: hsl(197, 100%, 16%);
   --ifm-footer-background-color: var(--ifm-color-primary-light);
 }
 [data-theme='dark'] {
-  @include theme.avo-green-light;
+  @include theme.avo-green;
   --ifm-footer-background-color: var(--ifm-color-primary);
 }
