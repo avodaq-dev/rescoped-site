@@ -4,8 +4,11 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import FrontendBackend from '@site/src/components/FrontendBackend';
+import PixiComp from '@site/src/components/PixiComp';
+
 import {useColorMode} from '@docusaurus/theme-common';
 
+import styles from './index.module.scss';
 import ReLogoColor from "@avo/monorepo/doku_libs/static/img/rescoped_logo_color.svg";
 import ReLogoWhite from "@avo/monorepo/doku_libs/static/img/rescoped_logo_white.svg";
 import {Fade} from "react-awesome-reveal";
@@ -21,21 +24,20 @@ function HomepageHeader() {
 
     return (
         <>
-            <header className={clsx('px-4 sm:px-16 py-32', darkTheme)}>
+            <header className={clsx('px-4 sm:px-16 py-64', darkTheme, styles.header)}>
+                <PixiComp/>
+
                 <div className="flex flex-col gap-4">
 
                     <Fade {...fadeProps}>
                         <h1>
-                            <ReLogoColor width="288" title="rescoped Logo" className={clsx('logo ', darkThemehide)}/>
-                            <ReLogoWhite width="288" title="rescoped Logo" className={clsx('logo', lightThemehide)}/>
-
+                            <ReLogoColor width="288" title="rescoped Logo" className={clsx('relogo ', darkThemehide)}/>
+                            <ReLogoWhite width="288" title="rescoped Logo" className={clsx('relogo', lightThemehide)}/>
                         </h1>
-                        <p className="text-3xl font-bold mb-4">{siteConfig.tagline}</p>
+                        <p className="text-5xl font-bold mb-4">{siteConfig.tagline}</p>
                         <div className='flex gap-4'>
                             <Link
-                                className="bg-avo-green-green
-                                hover:bg-avo-avo-blue-light
-                                text-white hover:text-white transition px-8 py-4 font-bold text-xl"
+                                className="bg-avo-green-green hover:bg-avo-green-500 text-white hover:text-white transition px-8 py-4 font-bold text-xl"
                                 to="#fontend-solutions">
                                 Frontend
                             </Link>
@@ -46,7 +48,6 @@ function HomepageHeader() {
                             </Link>
                         </div>
                     </Fade>
-
                 </div>
             </header>
         </>
