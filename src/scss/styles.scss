@@ -3,11 +3,14 @@
 @forward '~@avo/monorepo/doku_libs/styles/components';
 @use '~@avo/monorepo/doku_libs/styles/theme';
 
-
 // colors
 :root {
-  @include theme.avo-green-light;
+  @include theme.avo-pink;
+  --ifm-footer-color: hsl(197, 100%, 16%);
+  --ifm-footer-link-color: hsl(214, 10%, 87%);
+  --ifm-footer-background-color: var(--ifm-color-primary);
 }
 [data-theme='dark'] {
-  @include theme.avo-green-dark;
+  --ifm-footer-color: hsl(197, 100%, 16%);
+  --ifm-footer-background-color: var(--ifm-color-primary);
 }
