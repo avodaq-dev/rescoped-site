@@ -2,7 +2,6 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import FrontendBackend from '@site/src/components/FrontendBackend';
 import {useColorMode} from '@docusaurus/theme-common';
@@ -16,7 +15,7 @@ import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     const {isDarkTheme} = useColorMode();
-    const darkTheme = isDarkTheme ? '' : 'bg-emerald-50';
+    const darkTheme = isDarkTheme ? '' : 'bg-avo-green-50';
     const darkThemehide = isDarkTheme ? 'hidden' : '';
     const lightThemehide = !isDarkTheme ? 'hidden' : '';
 
@@ -34,12 +33,14 @@ function HomepageHeader() {
                         <p className="text-3xl font-bold mb-4">{siteConfig.tagline}</p>
                         <div className='flex gap-4'>
                             <Link
-                                className="bg-emerald-400 text-white hover:text-white hover:bg-indigo-900 transition px-8 py-4 font-bold text-xl rounded-md"
+                                className="bg-avo-green-green
+                                hover:bg-avo-avo-blue-light
+                                text-white hover:text-white transition px-8 py-4 font-bold text-xl"
                                 to="#fontend-solutions">
                                 Frontend
                             </Link>
                             <Link
-                                className="bg-emerald-400 text-white hover:text-white hover:bg-indigo-900 transition px-8 py-4 font-bold text-xl rounded-md"
+                                className="bg-avo-green-green hover:bg-avo-green-500 text-white hover:text-white transition px-8 py-4 font-bold text-xl"
                                 to="#backend-solutions">
                                 Backend
                             </Link>
@@ -58,10 +59,7 @@ export default function Home() {
     return (
         <Layout
             title={`${siteConfig.title}`}
-            description="Description will go into a meta tag in <head />">
-            <Head>
-                <script src="https://cdn.tailwindcss.com"></script>
-            </Head>
+            description="Advanced tooling for cutting edge engineers">
             <HomepageHeader/>
             <main>
                 <FrontendBackend/>
