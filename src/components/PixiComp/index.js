@@ -40,8 +40,8 @@ export default function PixiComp() {
 
         // On first render create application
         const app = new PIXI.Application({
-            width: 1920,
-            height: 1280,
+            width: 1280,
+            height: 853,
             backgroundColor: 0x32dcab,
             autoStart: false,
             backgroundAlpha: true,
@@ -117,8 +117,8 @@ export default function PixiComp() {
                 for (let i = 0, len = containers.length; i < len; i++) {
                     gsap.to(displacementFilters[i].scale, {
                         duration: 1.5,
-                        x: Math.atan(x - brushes[i].x) * 30,
-                        y: Math.atan(y - brushes[i].y) * 30,
+                        x: Math.atan(x - brushes[i].x) * 40,
+                        y: Math.atan(y - brushes[i].y) * 40,
                         ease: "power2.out",
                     });
 

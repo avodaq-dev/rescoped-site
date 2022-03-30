@@ -11,6 +11,9 @@ import {useColorMode} from '@docusaurus/theme-common';
 import styles from './index.module.scss';
 import ReLogoColor from "@avo/monorepo/doku_libs/static/img/rescoped_logo_color.svg";
 import ReLogoWhite from "@avo/monorepo/doku_libs/static/img/rescoped_logo_white.svg";
+import Dots1 from '@site/static/img/DOTS_01.svg';
+import Dots2 from '@site/static/img/DOTS_02.svg';
+
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation";
 
@@ -18,39 +21,56 @@ import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     const {isDarkTheme} = useColorMode();
-    const darkTheme = isDarkTheme ? '' : 'bg-avo-green-50';
+    const darkTheme = isDarkTheme ? '' : 'bg-amber-50';
     const darkThemehide = isDarkTheme ? 'hidden' : '';
     const lightThemehide = !isDarkTheme ? 'hidden' : '';
 
     return (
         <>
-            <header className={clsx('px-4 sm:px-16 py-64', darkTheme, styles.header)}>
+            <header className={clsx('px-16 md:px-16 pt-8 md:pt-24 pb-8 md:pb-24', darkTheme, styles.header)}>
                 <Fade duration={750} triggerOnce={true} delay={750}>
                     <PixiComp/>
                 </Fade>
 
-                <div className="flex flex-col gap-4 drop-shadow-2xl">
+
+                <div className={'arthur flex flex-col gap-12 drop-shadow-xl'}>
 
                     <Fade {...fadeProps}>
-                        <h1>
-                            <ReLogoColor width="288" title="rescoped Logo" className={clsx('relogo ', darkThemehide)}/>
-                            <ReLogoWhite width="288" title="rescoped Logo" className={clsx('relogo', lightThemehide)}/>
-                        </h1>
-                        <p className="text-5xl font-bold mb-4 ">{siteConfig.tagline}</p>
-                        <div className='flex gap-4'>
+
+                        <div className="flex justify-between -mb-8">
+                            <p className="text-3xl font-bold">
+                                Make good even better
+                            </p>
+                            <Dots1 className="h-[4rem] w-auto mt-3"/>
+                        </div>
+
+                        <h2 className="text-5xl !leading-tight md:text-7xl font-bold">
+                            Advanced tooling for <br className='hidden sm:block'/> cutting edge engineers.
+                        </h2>
+                        <div className='flex gap-8'>
                             <Link
-                                className="bg-avo-green-green hover:bg-avo-green-500 text-white hover:text-white transition px-8 py-4 font-bold text-xl"
+                                className="bg-avo-green-400 hover:bg-avo-pink-pink text-white hover:text-white transition px-8 py-4 font-bold text-xl"
                                 to="#fontend-solutions">
                                 Frontend
                             </Link>
                             <Link
-                                className="bg-avo-green-green hover:bg-avo-green-500 text-white hover:text-white transition px-8 py-4 font-bold text-xl"
+                                className="bg-avo-green-400 hover:bg-avo-pink-pink text-white hover:text-white transition px-8 py-4 font-bold text-xl"
                                 to="#backend-solutions">
                                 Backend
                             </Link>
                         </div>
+
+                        <div className="flex justify-between mt-auto mt-8">
+                            <Dots2 className="h-[4rem] md:h-[5rem] w-auto mb-3"/>
+                            <h1 className="w-[16rem] md:w-[24rem] flex">
+                                <ReLogoColor title="rescoped Logo" className={clsx('relogo mt-auto', darkThemehide)}/>
+                                <ReLogoWhite title="rescoped Logo" className={clsx('relogo mt-auto', lightThemehide)}/>
+                            </h1>
+                        </div>
                     </Fade>
                 </div>
+
+
             </header>
         </>
 

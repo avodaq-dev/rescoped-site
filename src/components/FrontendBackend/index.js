@@ -46,12 +46,12 @@ function Feature({Svg, title, description}) {
 
 export default function FrontendBackend() {
     return (
-        <section className="px-4 sm:px-16 py-32 bg-white/5">
+        <section className="px-16 py-32 bg-white/5">
             <article className="flex flex-col gap-4 mb-32" id="fontend-solutions">
                 <h1 className="text-2xl font-bold mb-4">
                     Frontend solutions
                 </h1>
-                <div className="flex gap-16 flex-col sm:flex-row">
+                <div className="flex gap-16 flex-col md:flex-row">
                     {FeatureList.map((props, idx) => (
                         <Feature key={idx} {...props} />
                     ))}
@@ -62,7 +62,7 @@ export default function FrontendBackend() {
                 <h1 className="text-2xl font-bold mb-4">
                     Backend solutions
                 </h1>
-                <div className="flex gap-16 flex-col sm:flex-row">
+                <div className="flex gap-16 flex-col md:flex-row">
                     {FeatureList.map((props, idx) => (
                         <Feature key={idx} {...props} />
                     ))}
