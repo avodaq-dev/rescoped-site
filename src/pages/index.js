@@ -25,16 +25,18 @@ function HomepageHeader() {
     return (
         <>
             <header className={clsx('px-4 sm:px-16 py-64', darkTheme, styles.header)}>
-                <PixiComp/>
+                <Fade duration={750} triggerOnce={true} delay={750}>
+                    <PixiComp/>
+                </Fade>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 drop-shadow-2xl">
 
                     <Fade {...fadeProps}>
                         <h1>
                             <ReLogoColor width="288" title="rescoped Logo" className={clsx('relogo ', darkThemehide)}/>
                             <ReLogoWhite width="288" title="rescoped Logo" className={clsx('relogo', lightThemehide)}/>
                         </h1>
-                        <p className="text-5xl font-bold mb-4">{siteConfig.tagline}</p>
+                        <p className="text-5xl font-bold mb-4 ">{siteConfig.tagline}</p>
                         <div className='flex gap-4'>
                             <Link
                                 className="bg-avo-green-green hover:bg-avo-green-500 text-white hover:text-white transition px-8 py-4 font-bold text-xl"
