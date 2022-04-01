@@ -8,6 +8,12 @@ module.exports = {
         "./docs/**/*.{md,mdx}"
     ],
     theme: {
+        screens: {
+            sm: '600px',
+            md: '996px',
+            lg: '1440px',
+            xl: '1920px',
+        },
         extend: {
             colors,
         },
