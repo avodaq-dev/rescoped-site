@@ -27,7 +27,7 @@ function HomepageHeader() {
 
     return (
         <>
-            <header className={clsx('px-16 md:px-16 pt-8 md:pt-24 pb-8 md:pb-24', darkTheme, styles.header)}>
+            <header className={clsx('px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24', darkTheme, styles.header)}>
                 <Fade duration={750} triggerOnce={true} delay={750}>
                     <PixiComp/>
                 </Fade>

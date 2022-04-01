@@ -1,5 +1,6 @@
 @use 'sass:map';
 
+@forward './fonts';
 @forward '~@avo/monorepo/doku_libs/styles/components';
 @use '~@avo/monorepo/doku_libs/styles/theme';
 
@@ -7,10 +8,10 @@
 :root {
   @include theme.avo-green;
   --ifm-footer-color: hsl(197, 100%, 16%);
-  --ifm-footer-link-color: hsl(214, 10%, 87%);
-  --ifm-footer-background-color: var(--ifm-color-primary);
+  --ifm-footer-link-color: var(--ifm-color-primary-lighter);
+  --ifm-footer-link-hover-color: white;
+  --ifm-footer-background-color: var(--ifm-color-primary-darkest);
 }
 [data-theme='dark'] {
   --ifm-footer-color: hsl(197, 100%, 16%);
-  --ifm-footer-background-color: var(--ifm-color-primary);
 }
