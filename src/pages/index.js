@@ -61,16 +61,14 @@ function HomepageHeader() {
                         </div>
 
                         <div className="flex justify-between mt-auto mt-8">
-                            <Dots2 className="h-[4rem] md:h-[5rem] w-auto mb-3"/>
-                            <h1 className="w-[16rem] md:w-[24rem] flex">
+                            <Dots2 className="h-[4rem] md:h-[5rem] w-auto"/>
+                            <h1 className="w-[16rem] md:w-[24rem] flex -mb-3">
                                 <ReLogoColor title="rescoped Logo" className={clsx('relogo mt-auto', darkThemehide)}/>
                                 <ReLogoWhite title="rescoped Logo" className={clsx('relogo mt-auto', lightThemehide)}/>
                             </h1>
                         </div>
                     </Fade>
                 </div>
-
-
             </header>
         </>
 
