@@ -3,8 +3,8 @@ import clsx from "clsx";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from "../PixiComp/styles.module.scss";
 
-import Displace from '@site/static/img/DP_02.png';
-import BGimg from '@site/static/img/BGimg_02.png';
+import Displace from '@site/static/img/DP_02.jpg';
+import BGimg from '@site/static/img/BGimg_02.jpg';
 
 export default function TestComp() {
     return (
