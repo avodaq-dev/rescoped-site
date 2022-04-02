@@ -1,5 +1,8 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import styles from "../FrontendBackend/styles.module.scss";
+
+
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
@@ -20,42 +23,38 @@ function Feature({Svg, title, description}) {
 export default function FrontendBackend() {
     return (
         <section className="px-4 sm:px-16 py-32 bg-white/5">
-            <article className="flex flex-col gap-4 mb-32" id="fontend-solutions">
+            <article className="flex flex-col gap-4 mb-64" id="fontend-solutions">
                 <h2 className="text-2xl font-bold mb-4 text-avo-pink-pink">
                     Frontend solutions
                 </h2>
-                <div className="flex gap-16 flex-col md:flex-row">
-                    <Fade {...fadeProps}>
+                <div className="flex gap-16 flex-col md:flex-row md:flex-auto relative">
+                    <Fade {...fadeProps} className={styles.linkPos}>
                         {FeatureListFrontend.map((props, idx) => (
                             <Feature key={idx} {...props} />
                         ))}
+                        <Link {...link_TWClasses}
+                              to="#fontend-solutions">
+                            Read more
+                        </Link>
                     </Fade>
                 </div>
-                <Fade direction={'up'} duration={750} triggerOnce={true} delay={750} className={'mt-16'}>
-                    <Link {...link_TWClasses}
-                          to="#fontend-solutions">
-                        Read more
-                    </Link>
-                </Fade>
             </article>
 
-            <article className="flex flex-col gap-4" id="backend-solutions">
+            <article className="flex flex-col gap-4 relative mb-40" id="backend-solutions">
                 <h2 className="text-2xl font-bold mb-4 text-avo-pink-pink">
                     Backend solutions
                 </h2>
                 <div className="flex gap-16 flex-col md:flex-row">
-                    <Fade {...fadeProps}>
+                    <Fade {...fadeProps} className={styles.linkPos}>
                         {FeatureListBackend.map((props, idx) => (
                             <Feature key={idx} {...props} />
                         ))}
+                        <Link {...link_TWClasses}
+                              to="#fontend-solutions">
+                            Read more
+                        </Link>
                     </Fade>
                 </div>
-                <Fade direction={'up'} duration={750} triggerOnce={true} delay={750} className={'mt-16'}>
-                    <Link {...link_TWClasses}
-                          to="#fontend-solutions">
-                        Read more
-                    </Link>
-                </Fade>
             </article>
         </section>
     );
