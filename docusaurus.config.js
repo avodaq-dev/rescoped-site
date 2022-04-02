@@ -61,7 +61,7 @@ const config = {
                     alt: 'rescoped logo',
                     src: 'img/re_logo.svg',
                     srcDark: 'img/re_logo_dark.svg',
-                    width: 56,
+                    width: 48,
                     href: '/'
                 },
                 items: [
