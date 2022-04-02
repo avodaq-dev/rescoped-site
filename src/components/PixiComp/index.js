@@ -4,7 +4,11 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from "../PixiComp/styles.module.scss";
 
 import Displace from '@site/static/img/DP_02.jpg';
-import BGimg from '@site/static/img/BGimg_02.jpg';
+import BGimg1 from '@site/static/img/BGimg_01.jpg';
+import BGimg2 from '@site/static/img/BGimg_02.jpg';
+import BGimg3 from '@site/static/img/BGimg_03.jpg';
+import BGimg4 from '@site/static/img/BGimg_04.jpg';
+import BGimg5 from '@site/static/img/BGimg_05.jpg';
 
 export default function TestComp() {
     return (
@@ -13,6 +17,9 @@ export default function TestComp() {
                 const PIXI = require('pixi.js');
                 const gsap = require('gsap');
                 const ref = useRef(null);
+                const imgArr = [BGimg1, BGimg2, BGimg3, BGimg4, BGimg5];
+                const IMGswap =  imgArr[Math.floor(Math.random() * imgArr.length)]
+                console.log(IMGswap);
 
                 useEffect(() => {
                     let rt = [],
@@ -136,7 +143,7 @@ export default function TestComp() {
                 return (
                     <div ref={ref}
                          className={clsx('arthur', styles.arthur)}
-                         data-img={BGimg}
+                         data-img={IMGswap}
                          data-displace={Displace}
                     />
                 );

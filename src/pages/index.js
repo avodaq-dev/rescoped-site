@@ -44,17 +44,17 @@ function HomepageHeader() {
                             <Dots1 className="h-[4rem] w-auto mt-3"/>
                         </div>
 
-                        <h2 className="text-5xl !leading-tight md:text-7xl font-bold">
+                        <h2 className="text-5xl !leading-tight md:text-7xl font-light mb-6">
                             Advanced tooling for <br className='hidden sm:block'/> cutting edge engineers.
                         </h2>
                         <div className='flex gap-8'>
                             <Link
-                                className="bg-avo-green-400 hover:bg-avo-pink-pink text-white hover:text-white transition px-8 py-4 font-bold text-xl"
+                                className="bg-avo-pink-pink hover:bg-white text-white hover:text-avo-pink-pink transition px-8 py-4 font-bold text-xl"
                                 to="#fontend-solutions">
                                 Frontend
                             </Link>
                             <Link
-                                className="bg-avo-green-400 hover:bg-avo-pink-pink text-white hover:text-white transition px-8 py-4 font-bold text-xl"
+                                className="bg-avo-pink-pink hover:bg-white text-white hover:text-avo-pink-pink transition px-8 py-4 font-bold text-xl"
                                 to="#backend-solutions">
                                 Backend
                             </Link>

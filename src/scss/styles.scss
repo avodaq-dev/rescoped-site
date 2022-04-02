@@ -8,9 +8,9 @@
 :root {
   @include theme.avo-green;
   --ifm-footer-color: hsl(197, 100%, 16%);
-  --ifm-footer-link-color: var(--ifm-color-primary-lighter);
-  --ifm-footer-link-hover-color: white;
-  --ifm-footer-background-color: var(--ifm-color-primary-darkest);
+  --ifm-footer-link-color: white;
+  --ifm-footer-link-hover-color: var(--ifm-footer-color);
+  --ifm-footer-background-color: var(--ifm-color-primary);
 }
 [data-theme='dark'] {
   --ifm-footer-color: hsl(197, 100%, 16%);
