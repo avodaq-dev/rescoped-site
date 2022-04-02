@@ -1,46 +1,19 @@
 import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.scss';
+import Link from '@docusaurus/Link';
+import {Fade} from "react-awesome-reveal";
+import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
+import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
 
-const FeatureList = [
-    {
-        title: 'Easy to Use',
-        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-        description: (
-            <>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi consequatur dicta dignissimos dolor
-                dolorem iusto, minus mollitia nemo perferendis perspiciatis quisquam tenetur?
-            </>
-        ),
-    },
-    {
-        title: 'Focus on What Matters',
-        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-        description: (
-            <>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores dolore expedita hic
-                neque pariatur ratione, temporibus unde vero consectetur adipisicing elit.
-            </>
-        ),
-    },
-    {
-        title: 'Powered by React',
-        Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-        description: (
-            <>
-                Alias aliquam dignissimos dolorem esse est exercitationem explicabo officia
-                quae, repellendus repudiandae sit, suscipit velit veniam vero voluptatum?
-            </>
-        ),
-    },
-];
+import {FeatureListBackend} from "./FeatureListBackend";
+import {FeatureListFrontend} from "./FeatureListFrontend";
+
 
 function Feature({Svg, title, description}) {
     return (
-            <div className="">
-                <h3 className="font-bold text-lg mb-4">{title}</h3>
-                <p className='text-lg'>{description}</p>
-            </div>
+        <div>
+            <h3 className="font-bold text-lg mb-4">{title}</h3>
+            <p className='text-lg'>{description}</p>
+        </div>
     );
 }
 
@@ -52,10 +25,18 @@ export default function FrontendBackend() {
                     Frontend solutions
                 </h2>
                 <div className="flex gap-16 flex-col md:flex-row">
-                    {FeatureList.map((props, idx) => (
-                        <Feature key={idx} {...props} />
-                    ))}
+                    <Fade {...fadeProps}>
+                        {FeatureListFrontend.map((props, idx) => (
+                            <Feature key={idx} {...props} />
+                        ))}
+                    </Fade>
                 </div>
+                <Fade direction={'up'} duration={750} triggerOnce={true} delay={750} className={'mt-16'}>
+                    <Link {...link_TWClasses}
+                          to="#fontend-solutions">
+                        Read more
+                    </Link>
+                </Fade>
             </article>
 
             <article className="flex flex-col gap-4" id="backend-solutions">
@@ -63,10 +44,18 @@ export default function FrontendBackend() {
                     Backend solutions
                 </h2>
                 <div className="flex gap-16 flex-col md:flex-row">
-                    {FeatureList.map((props, idx) => (
-                        <Feature key={idx} {...props} />
-                    ))}
+                    <Fade {...fadeProps}>
+                        {FeatureListBackend.map((props, idx) => (
+                            <Feature key={idx} {...props} />
+                        ))}
+                    </Fade>
                 </div>
+                <Fade direction={'up'} duration={750} triggerOnce={true} delay={750} className={'mt-16'}>
+                    <Link {...link_TWClasses}
+                          to="#fontend-solutions">
+                        Read more
+                    </Link>
+                </Fade>
             </article>
         </section>
     );

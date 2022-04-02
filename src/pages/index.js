@@ -15,8 +15,7 @@ import Dots1 from '@site/static/img/DOTS_01.svg';
 import Dots2 from '@site/static/img/DOTS_02.svg';
 
 import {Fade} from "react-awesome-reveal";
-import {fadeProps} from "@avo/monorepo/doku_libs/reveal_animations/fadeAnimation";
-
+import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
@@ -38,25 +37,25 @@ function HomepageHeader() {
                     <Fade {...fadeProps}>
 
                         <div className="flex justify-between -mb-8">
-                            <p className="text-3xl font-bold">
+                            <p className="text-xl sm:text-3xl font-bold">
                                 Make good even better
                             </p>
                             <Dots1 className="h-[4rem] w-auto mt-3"/>
                         </div>
 
-                        <h2 className="text-5xl !leading-tight md:text-7xl font-light mb-6">
+                        <h2 className="text-5xl !leading-tight md:text-7xl font-normal md:font-light mb-6">
                             Advanced tooling for <br className='hidden sm:block'/> cutting edge engineers.
                         </h2>
-                        <div className='flex gap-8'>
+                        <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>
                             <Link
                                 className="bg-avo-pink-pink hover:bg-white text-white hover:text-avo-pink-pink transition px-8 py-4 font-bold text-xl"
                                 to="#fontend-solutions">
-                                Frontend
+                                Frontend solutions
                             </Link>
                             <Link
                                 className="bg-avo-pink-pink hover:bg-white text-white hover:text-avo-pink-pink transition px-8 py-4 font-bold text-xl"
                                 to="#backend-solutions">
-                                Backend
+                                Backend solutions
                             </Link>
                         </div>
 

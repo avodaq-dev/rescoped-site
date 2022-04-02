@@ -121,7 +121,7 @@ export default function TestComp() {
 
                             for (let i = 0, len = containers.length; i < len; i++) {
                                 gsap.gsap.to(displacementFilters[i].scale, {
-                                    duration: 1.5,
+                                    duration: 0.5,
                                     x: Math.atan(x - brushes[i].x) * 50,
                                     y: Math.atan(y - brushes[i].y) * 50,
                                     ease: "power2.out",
