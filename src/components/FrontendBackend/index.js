@@ -27,7 +27,7 @@ export default function FrontendBackend() {
                 <h2 className="text-2xl font-bold mb-4 text-avo-pink-pink">
                     Frontend solutions
                 </h2>
-                <div className="flex gap-16 flex-col md:flex-row md:flex-auto relative">
+                <div className="flex gap-16 lg:gap-32 flex-col md:flex-row md:flex-auto relative">
                     <Fade {...fadeProps} className={styles.linkPos}>
                         {FeatureListFrontend.map((props, idx) => (
                             <Feature key={idx} {...props} />
@@ -44,7 +44,7 @@ export default function FrontendBackend() {
                 <h2 className="text-2xl font-bold mb-4 text-avo-pink-pink">
                     Backend solutions
                 </h2>
-                <div className="flex gap-16 flex-col md:flex-row">
+                <div className="flex gap-16 lg:gap-32 flex-col md:flex-row">
                     <Fade {...fadeProps} className={styles.linkPos}>
                         {FeatureListBackend.map((props, idx) => (
                             <Feature key={idx} {...props} />

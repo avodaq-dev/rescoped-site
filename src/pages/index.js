@@ -40,10 +40,9 @@ function HomepageHeader() {
                             <p className="text-xl sm:text-3xl font-bold">
                                 Make good even better
                             </p>
-                            <Dots1 className="h-[4rem] w-auto mt-3"/>
                         </div>
 
-                        <h2 className="text-5xl !leading-tight md:text-7xl font-normal md:font-light mb-6">
+                        <h2 className="text-5xl !leading-tight md:text-7xl font-normal md:font-light">
                             Advanced tooling for <br className='hidden sm:block'/> cutting edge engineers.
                         </h2>
                         <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>
@@ -58,15 +57,19 @@ function HomepageHeader() {
                                 Backend solutions
                             </Link>
                         </div>
+                    </Fade>
 
-                        <div className="flex justify-between mt-auto mt-8">
-                            <Dots2 className="h-[4rem] md:h-[5.75rem] w-auto"/>
+
+                    <div className="flex justify-end mt-auto mt-8">
+                        <Fade cascade={'true'} triggerOnce={'true'} damping={0.25} duration={750} delay={1000}>
+                            <Dots1 className="h-[4rem] w-auto mt-3 absolute top-0 right-0"/>
+                            <Dots2 className="h-[4rem] md:h-[5.75rem] w-auto absolute bottom-0 left-0"/>
                             <h1 className="w-[16rem] md:w-[24rem] flex -mb-3">
                                 <ReLogoColor title="rescoped Logo" className={clsx('relogo mt-auto', darkThemehide)}/>
                                 <ReLogoWhite title="rescoped Logo" className={clsx('relogo mt-auto', lightThemehide)}/>
                             </h1>
-                        </div>
-                    </Fade>
+                        </Fade>
+                    </div>
                 </div>
             </header>
         </>
