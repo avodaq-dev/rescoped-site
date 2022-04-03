@@ -19,7 +19,7 @@ export default function HomepageHeader() {
 
     return (
         <>
-            <header
+            <header id="header"
                 className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24 max-w-[105rem] mx-auto', styles.header)}>
                 <Fade duration={750} triggerOnce={true} delay={750}>
                     <PixiComp/>
@@ -38,12 +38,12 @@ export default function HomepageHeader() {
                         </h2>
                         <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>
                             <Link
-                                className="bg-avo-pink-pink hover:bg-white text-white hover:text-avo-pink-pink transition px-8 py-4 font-bold text-xl"
+                                className="bg-avo-pink-pink hover:bg-avo-pink-400 text-white hover:text-white hover:-translate-y-1 hover:scale-105	 hover:drop-shadow-xl transition px-8 py-4 font-bold text-xl"
                                 to="#fontend-solutions">
                                 Frontend solutions
                             </Link>
                             <Link
-                                className="bg-avo-pink-pink hover:bg-white text-white hover:text-avo-pink-pink transition px-8 py-4 font-bold text-xl"
+                                className="bg-avo-pink-pink hover:bg-avo-pink-400 text-white hover:text-white hover:-translate-y-1 hover:scale-105	 hover:drop-shadow-xl transition px-8 py-4 font-bold text-xl"
                                 to="#backend-solutions">
                                 Backend solutions
                             </Link>
