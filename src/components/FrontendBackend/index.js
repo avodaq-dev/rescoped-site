@@ -2,13 +2,17 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import styles from "../FrontendBackend/styles.module.scss";
 
+import {FeatureListBackend} from "./FeatureListBackend";
+import {FeatureListFrontend} from "./FeatureListFrontend";
+
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
 
-import {FeatureListBackend} from "./FeatureListBackend";
-import {FeatureListFrontend} from "./FeatureListFrontend";
+
 import Dots1 from '@site/static/img/DOTS_01.svg';
+import {useColorMode} from "@docusaurus/theme-common";
+import clsx from "clsx";
 
 
 function Feature({Svg, title, description}) {
@@ -21,8 +25,11 @@ function Feature({Svg, title, description}) {
 }
 
 export default function FrontendBackend() {
+    const {isDarkTheme} = useColorMode();
+    const darkTheme = isDarkTheme ? 'bg-white/5' : 'bg-amber-50';
+
     return (
-        <section className="px-4 sm:px-16 py-32 bg-white/5">
+        <section className={clsx('px-4 sm:px-16 py-32 max-w-[105rem] mx-auto', darkTheme)}>
             <article className="flex flex-col gap-4 mb-64" id="fontend-solutions">
                 <h2 className="text-2xl font-bold mb-4 text-avo-pink-pink">
                     Frontend solutions
