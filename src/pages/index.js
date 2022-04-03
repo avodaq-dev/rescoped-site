@@ -1,8 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import FrontendBackend from '@site/src/components/FrontendBackend';
+
 import HomepageHeader from '@site/src/components/HomepageHeader';
+import FrontendBackend from "../components/FrontendBackend";
 
 
 export default function Home() {

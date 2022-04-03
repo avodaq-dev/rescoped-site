@@ -16,6 +16,9 @@ module.exports = {
         },
         extend: {
             colors,
+            flexGrow: {
+                '2': 2
+            }
         },
     },
     plugins: [],
