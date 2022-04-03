@@ -162,7 +162,7 @@ export default function TestComp() {
 
                 return (
                     <div ref={ref}
-                         className={clsx('arthur', styles.arthur)}
+                         className={clsx('pixiRef', styles.pixiRef)}
                          data-img={IMGswap}
                          data-displace={Displace}
                     />

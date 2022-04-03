@@ -25,7 +25,7 @@ export default function HomepageHeader() {
                     <PixiComp/>
                 </Fade>
 
-                <div className={'arthur flex flex-col gap-12 drop-shadow-xl'}>
+                <div className={'flex flex-col gap-12 drop-shadow-xl'}>
                     <Fade {...fadeProps}>
                         <div className="flex justify-between -mb-8">
                             <p className="text-xl sm:text-3xl font-bold">
