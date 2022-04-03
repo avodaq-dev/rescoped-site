@@ -2,13 +2,13 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import styles from "../FrontendBackend/styles.module.scss";
 
-
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
 
 import {FeatureListBackend} from "./FeatureListBackend";
 import {FeatureListFrontend} from "./FeatureListFrontend";
+import Dots1 from '@site/static/img/DOTS_01.svg';
 
 
 function Feature({Svg, title, description}) {
@@ -41,6 +41,8 @@ export default function FrontendBackend() {
             </article>
 
             <article className="flex flex-col gap-4 relative mb-40" id="backend-solutions">
+                <Dots1 className="h-[4rem] w-auto mt-3 absolute top-0 right-0"/>
+
                 <h2 className="text-2xl font-bold mb-4 text-avo-pink-pink">
                     Backend solutions
                 </h2>
