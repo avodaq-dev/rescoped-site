@@ -49,19 +49,13 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            // announcementBar: {
-            //     id: 'support_us',
-            //     content:
-            //         'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
-            //     isCloseable: true,
-            // },
             navbar: {
                 hideOnScroll: true,
                 logo: {
                     alt: 'rescoped logo',
                     src: 'img/re_logo.svg',
                     srcDark: 'img/re_logo_dark.svg',
-                    width: 56,
+                    width: 48,
                     href: '/'
                 },
                 items: [

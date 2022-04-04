@@ -3,8 +3,12 @@ import clsx from "clsx";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from "../PixiComp/styles.module.scss";
 
-import Displace from '@site/static/img/DP_02.png';
-import BGimg from '@site/static/img/BGimg_02.png';
+import Displace from '@site/static/img/DP_02.jpg';
+import BGimg1 from '@site/static/img/BGimg_01.jpg';
+import BGimg2 from '@site/static/img/BGimg_02.jpg';
+import BGimg3 from '@site/static/img/BGimg_03.jpg';
+import BGimg4 from '@site/static/img/BGimg_04.jpg';
+import BGimg5 from '@site/static/img/BGimg_05.jpg';
 
 export default function TestComp() {
     return (
@@ -13,6 +17,8 @@ export default function TestComp() {
                 const PIXI = require('pixi.js');
                 const gsap = require('gsap');
                 const ref = useRef(null);
+                const imgArr = [BGimg1, BGimg2, BGimg3, BGimg4, BGimg5];
+                const IMGswap = imgArr[Math.floor(Math.random() * imgArr.length)]
 
                 useEffect(() => {
                     let rt = [],
@@ -22,7 +28,8 @@ export default function TestComp() {
                         containers = [],
                         channelsContainer = [],
                         displacementFilters = [],
-                        brushes = [];
+                        brushes = [],
+                        MouseIn;
 
                     // CHANNEL FILTERS
                     let redChannelFilter = new PIXI.filters.ColorMatrixFilter();
@@ -108,19 +115,37 @@ export default function TestComp() {
 
                         app.stage.interactive = true;
 
-                        app.stage.on("pointermove", (ev) => {
-                            let x = ev.data.global.x;
-                            let y = ev.data.global.y;
+                        const headerElm = document.getElementById('section-header');
+                        headerElm.addEventListener('mouseenter', () => {
+                            MouseIn = true;
+                        });
+                        headerElm.addEventListener('mouseenter', () => {
+                            MouseIn = true;
+                        });
+                        headerElm.addEventListener('mouseleave', () => {
+                            MouseIn = false;
+                        });
 
-                            for (let i = 0, len = containers.length; i < len; i++) {
-                                gsap.gsap.to(displacementFilters[i].scale, {
-                                    duration: 1.5,
-                                    x: Math.atan(x - brushes[i].x) * 50,
-                                    y: Math.atan(y - brushes[i].y) * 50,
-                                    ease: "power2.out",
-                                });
-                                brushes[i].position = ev.data.global;
+                        app.stage.on("pointermove", (ev) => {
+                            if (MouseIn) {
+                                let x = ev.data.global.x;
+                                let y = ev.data.global.y;
+
+                                for (let i = 0, len = containers.length; i < len; i++) {
+                                    gsap.gsap.to(displacementFilters[i].scale, {
+                                        duration: 0.5,
+                                        x: Math.atan(x - brushes[i].x) * 50,
+                                        y: Math.atan(y - brushes[i].y) * 50,
+                                        ease: "power2.out",
+                                    });
+                                    brushes[i].position = ev.data.global;
+                                }
+                            } else {
+                                for (let i = 0, len = containers.length; i < len; i++) {
+                                    brushes[i].position = {x: 15000, y: 15000};
+                                }
                             }
+
                         });
                     })
 
@@ -135,8 +160,8 @@ export default function TestComp() {
 
                 return (
                     <div ref={ref}
-                         className={clsx('arthur', styles.arthur)}
-                         data-img={BGimg}
+                         className={clsx('pixiRef', styles.pixiRef)}
+                         data-img={IMGswap}
                          data-displace={Displace}
                     />
                 );
