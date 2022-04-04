@@ -1,16 +1,24 @@
 import React from "react";
+import BGimg1 from '@site/static/img/BGimg_01.jpg';
+import BGimg2 from '@site/static/img/BGimg_02.jpg';
+import BGimg3 from '@site/static/img/BGimg_03.jpg';
+import BGimg4 from '@site/static/img/BGimg_04.jpg';
+import BGimg5 from '@site/static/img/BGimg_05.jpg';
 
 export default function DividerColor() {
+    const imgArr = [BGimg1, BGimg2, BGimg3, BGimg4, BGimg5];
+    const IMGswap = imgArr[Math.floor(Math.random() * imgArr.length)]
 
     return (
-        <div className="flex flex-col -mx-4 sm:-mx-[4rem]">
+        <div className="flex flex-col -mx-4 sm:-mx-[4rem]" id='divider-image'>
             <div className='flex h-16'>
-                <div className='flex-grow grow-1 bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green'></div>
-                <div className='flex-grow grow-2'></div>
+                <div
+                    className='w-1/3 bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green'></div>
+                <div className='w-2/3'></div>
             </div>
             <div className='flex h-80'>
-                <div className='flex-grow grow-1 bg-avo-blue-dark'></div>
-                <div className='flex-grow grow-2 bg-avo-green-green'></div>
+                <div className='w-1/3 bg-avo-blue-dark'></div>
+                <img className="w-2/3 h-100 object-cover bg-avo-green-green" src={IMGswap} alt=""/>
             </div>
         </div>
     );

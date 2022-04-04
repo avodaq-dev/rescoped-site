@@ -3,7 +3,8 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 import HomepageHeader from '@site/src/components/HomepageHeader';
-import FrontendBackend from "../components/FrontendBackend";
+import SectionFrontendBackend from '@site/src/components/SectionFrontendBackend';
+import About from '@site/src/components/About';
 
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
             description="Advanced tooling for cutting edge engineers">
             <HomepageHeader/>
             <main>
-                <FrontendBackend/>
+                <SectionFrontendBackend/>
+                <About/>
             </main>
         </Layout>
     );

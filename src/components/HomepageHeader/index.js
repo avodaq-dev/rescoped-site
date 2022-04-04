@@ -19,7 +19,7 @@ export default function HomepageHeader() {
 
     return (
         <>
-            <header id="header"
+            <header id="section-header"
                 className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24 max-w-[105rem] mx-auto', styles.header)}>
                 <Fade duration={750} triggerOnce={true} delay={750}>
                     <PixiComp/>

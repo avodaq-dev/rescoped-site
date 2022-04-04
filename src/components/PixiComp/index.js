@@ -9,7 +9,6 @@ import BGimg2 from '@site/static/img/BGimg_02.jpg';
 import BGimg3 from '@site/static/img/BGimg_03.jpg';
 import BGimg4 from '@site/static/img/BGimg_04.jpg';
 import BGimg5 from '@site/static/img/BGimg_05.jpg';
-import gsap from "gsap";
 
 export default function TestComp() {
     return (
@@ -117,7 +116,7 @@ export default function TestComp() {
 
                         app.stage.interactive = true;
 
-                        const headerElm = document.getElementById('header');
+                        const headerElm = document.getElementById('section-header');
                         headerElm.addEventListener('mouseenter', e => {
                             MouseIn = true;
                         });

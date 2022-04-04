@@ -8,7 +8,6 @@ import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
 
-import DividerColor from '@site/src/components/DividerColor';
 
 
 
@@ -24,7 +23,7 @@ function Feature({Svg, title, description}) {
 export default function SectionFrontend() {
     return (
         <>
-            <article className="flex flex-col gap-4 mb-48" id="fontend-solutions">
+            <article className="flex flex-col gap-4 mb-64">
                 <h2 className="text-2xl font-bold mb-4 sm:mb-12 text-avo-pink-pink">
                     Frontend <br/>solutions
                 </h2>
@@ -40,8 +39,6 @@ export default function SectionFrontend() {
                     </Fade>
                 </div>
             </article>
-
-            <DividerColor/>
         </>
     );
 }

@@ -8,7 +8,6 @@ import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
 
-import DividerImage from '@site/src/components/DividerImage';
 import Dots1 from '@site/static/img/DOTS_01.svg';
 
 
@@ -24,7 +23,7 @@ function Feature({Svg, title, description}) {
 export default function SectionBackend() {
     return (
         <>
-            <article className="flex flex-col gap-4 relative mb-80" id="backend-solutions">
+            <article className="flex flex-col gap-4 relative mb-48">
                 <Dots1 className="h-[4rem] w-auto absolute top-0 right-0"/>
                 <h2 className="text-2xl font-bold mb-4 sm:mb-12 text-avo-pink-pink">
                     Backend <br/>solutions
@@ -43,7 +42,6 @@ export default function SectionBackend() {
 
             </article>
 
-            <DividerImage/>
         </>
 
     );
