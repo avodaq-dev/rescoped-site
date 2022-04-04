@@ -1,14 +1,11 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import styles from "./styles.module.scss";
 
 import {FeatureListFrontend} from "./FeatureListFrontend";
 
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
-
-
 
 
 function Feature({Svg, title, description}) {
@@ -23,21 +20,23 @@ function Feature({Svg, title, description}) {
 export default function SectionFrontend() {
     return (
         <>
-            <article className="flex flex-col gap-4 mb-64">
-                <h2 className="text-2xl font-bold mb-4 sm:mb-12 text-avo-pink-pink">
+            <article className="flex flex-col gap-16 relative mb-48">
+                <h2 className="text-2xl font-bold text-avo-pink-pink">
                     Frontend <br/>solutions
                 </h2>
-                <div className="flex gap-16 lg:gap-32 flex-col md:flex-row md:flex-auto relative">
-                    <Fade {...fadeProps} className={styles.linkPos}>
+                <div className="flex gap-16 lg:gap-32 flex-col md:flex-row ">
+                    <Fade {...fadeProps}>
                         {FeatureListFrontend.map((props, idx) => (
                             <Feature key={idx} {...props} />
                         ))}
-                        <Link {...link_TWClasses}
-                              to="#fontend-solutions">
-                            Read more
-                        </Link>
                     </Fade>
                 </div>
+                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} duration={750} triggerOnce={true} delay={500}>
+                    <Link {...link_TWClasses}
+                          to="#fontend-solutions">
+                        Read more
+                    </Link>
+                </Fade>
             </article>
         </>
     );
