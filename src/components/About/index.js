@@ -1,13 +1,12 @@
 import React from "react";
-import clsx from "clsx";
-import {useColorMode} from "@docusaurus/theme-common";
-import Link from "@docusaurus/core/lib/client/exports/Link";
-
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
-import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
-
 import {FeatureListAbout} from "./FeatureListAbout";
+import clsx from "clsx";
+
+import Button from '@site/src/components/Button';
+
+import {useColorMode} from "@docusaurus/theme-common";
 import DividerImage from '@site/src/components/DividerImage';
 
 
@@ -36,11 +35,8 @@ export default function About() {
                         ))}
                     </Fade>
                 </div>
-                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} duration={750} triggerOnce={true} delay={500}>
-                    <Link {...link_TWClasses}
-                          to="#fontend-solutions">
-                        Read more
-                    </Link>
+                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} direction="up" duration={750} triggerOnce={true} delay={500}>
+                    <Button text={'Read more'} link={'/blog/'}/>
                 </Fade>
             </article>
 

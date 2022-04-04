@@ -7,8 +7,6 @@
 // colors
 :root {
   @include theme.avo-green;
-  --ifm-footer-color: var(--ifm-color-primary);
-  --ifm-footer-link-color: white;
 }
 [data-theme='dark'] {
 }

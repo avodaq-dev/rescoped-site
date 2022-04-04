@@ -1,12 +1,9 @@
 import React from 'react';
-import Link from '@docusaurus/Link';
-
 import {FeatureListBackend} from "./FeatureListBackend";
-
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
-import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
 
+import Button from '@site/src/components/Button';
 import Dots1 from '@site/static/img/DOTS_01.svg';
 
 function Feature({Svg, title, description}) {
@@ -33,11 +30,8 @@ export default function SectionBackend() {
                         ))}
                     </Fade>
                 </div>
-                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} duration={750} triggerOnce={true} delay={500}>
-                    <Link {...link_TWClasses}
-                          to="#fontend-solutions">
-                        Read more
-                    </Link>
+                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} direction="up" duration={750} triggerOnce={true} delay={500}>
+                    <Button text={'Read more'} link={'#fontend-solutions'}/>
                 </Fade>
             </article>
         </>

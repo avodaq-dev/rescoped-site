@@ -9,9 +9,9 @@ export default function DividerColor2() {
                 <div className="flex-grow grow-1 bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green"></div>
             </div>
             <div className="flex h-16">
-                <div className="flex items-center justify-center w-2/3 bg-avo-green-green">
-                    <span className="font-bold text-white">Follow us on <a href="">github</a>!</span>
-                </div>
+                <p className="flex items-center justify-center w-2/3 bg-avo-green-green font-bold text-xl !text-white">
+                    Follow us on&nbsp;<a className="!text-white" href="">github</a>!
+                </p>
                 <div className="w-1/3"></div>
             </div>
 
