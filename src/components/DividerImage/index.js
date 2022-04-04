@@ -10,8 +10,9 @@ import clsx from "clsx";
 export default function DividerImage() {
     const imgArr = [BGimg1, BGimg2, BGimg3, BGimg4, BGimg5];
     const IMGswap = imgArr[Math.floor(Math.random() * imgArr.length)]
-    const {isDarkTheme} = useColorMode();
-    const darkTheme = isDarkTheme ? 'bg-avo-blue-dark' : 'bg-white';
+    const {colorMode} = useColorMode();
+    const darkTheme = colorMode === 'dark' ? 'bg-avo-blue-dark' : 'bg-white';
+
     return (
         <div className="flex flex-col -mx-4 sm:-mx-[4rem]" id='divider-image'>
             <div className='flex h-16'>

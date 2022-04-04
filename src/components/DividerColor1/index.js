@@ -3,8 +3,9 @@ import {useColorMode} from "@docusaurus/theme-common";
 import clsx from "clsx";
 
 export default function DividerColor1() {
-    const {isDarkTheme} = useColorMode();
-    const darkTheme = isDarkTheme ? 'bg-avo-blue-dark' : 'bg-white';
+    const {colorMode} = useColorMode();
+    const darkTheme = colorMode === 'dark' ? 'bg-avo-blue-dark' : 'bg-white';
+
     return (
         <div className="flex flex-col -mx-4 sm:-mx-[4rem] mb-16">
             <div className="flex h-16">

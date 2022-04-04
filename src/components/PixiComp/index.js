@@ -19,7 +19,6 @@ export default function TestComp() {
                 const ref = useRef(null);
                 const imgArr = [BGimg1, BGimg2, BGimg3, BGimg4, BGimg5];
                 const IMGswap = imgArr[Math.floor(Math.random() * imgArr.length)]
-                console.log(IMGswap);
 
                 useEffect(() => {
                     let rt = [],
@@ -117,13 +116,13 @@ export default function TestComp() {
                         app.stage.interactive = true;
 
                         const headerElm = document.getElementById('section-header');
-                        headerElm.addEventListener('mouseenter', e => {
+                        headerElm.addEventListener('mouseenter', () => {
                             MouseIn = true;
                         });
-                        headerElm.addEventListener('mouseenter', e => {
+                        headerElm.addEventListener('mouseenter', () => {
                             MouseIn = true;
                         });
-                        headerElm.addEventListener('mouseleave', e => {
+                        headerElm.addEventListener('mouseleave', () => {
                             MouseIn = false;
                         });
 

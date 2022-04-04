@@ -21,8 +21,8 @@ function Feature({Svg, title, description}) {
 }
 
 export default function About() {
-    const {isDarkTheme} = useColorMode();
-    const darkTheme = isDarkTheme ? 'bg-white/5' : 'bg-amber-50';
+    const {colorMode} = useColorMode();
+    const darkTheme = colorMode === 'dark' ? 'bg-white/5' : 'bg-amber-50';
     return (
         <section className={clsx('px-4 sm:px-16 max-w-[105rem] mx-auto', darkTheme)} id="section-about">
             <article className="flex flex-col gap-16 mb-48" >

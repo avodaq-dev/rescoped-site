@@ -13,9 +13,9 @@ import ReLogoColor from "@avo/monorepo/doku_libs/static/img/rescoped_logo_color.
 import ReLogoWhite from "@avo/monorepo/doku_libs/static/img/rescoped_logo_white.svg";
 
 export default function HomepageHeader() {
-    const {isDarkTheme} = useColorMode();
-    const darkThemehide = isDarkTheme ? 'hidden' : '';
-    const lightThemehide = !isDarkTheme ? 'hidden' : '';
+    const {colorMode} = useColorMode();
+    const darkThemehide = colorMode === 'dark' ? 'hidden' : '';
+    const lightThemehide = colorMode === 'light' ? 'hidden' : '';
 
     return (
         <>

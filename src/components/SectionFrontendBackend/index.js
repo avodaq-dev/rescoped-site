@@ -7,8 +7,8 @@ import DividerColor2 from '@site/src/components/DividerColor2';
 import DividerColor1 from '@site/src/components/DividerColor1';
 
 export default function SectionFrontendBackend() {
-    const {isDarkTheme} = useColorMode();
-    const darkTheme = isDarkTheme ? 'bg-white/5' : 'bg-amber-50';
+    const {colorMode} = useColorMode();
+    const darkTheme = colorMode === 'dark' ? 'bg-white/5' : 'bg-amber-50';
     return (
         <section className={clsx('px-4 sm:px-16 max-w-[105rem] mx-auto', darkTheme)} id="section-front-back">
             <DividerColor1/>
