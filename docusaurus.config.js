@@ -49,6 +49,10 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            colorMode: {
+                defaultMode: 'dark',
+                respectPrefersColorScheme: true,
+            },
             navbar: {
                 hideOnScroll: true,
                 logo: {
@@ -84,7 +88,7 @@ const config = {
                         ],
                     },
                     {to: 'blog', label: 'about', position: 'left'},
-                    {to: '#contact', label: 'contact', position: 'left'},
+                    {to: '#section-contact', label: 'contact', position: 'left'},
                 ],
             },
             footer: {

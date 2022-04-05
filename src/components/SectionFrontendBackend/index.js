@@ -7,9 +7,9 @@ import {useColorMode} from "@docusaurus/theme-common";
 
 export default function SectionFrontendBackend() {
     const {colorMode} = useColorMode();
-    const darkTheme = colorMode === 'dark' ? 'bg-white/5' : 'bg-amber-500/5';
+    const darkThemeBG = colorMode === 'dark' ? 'bg-avo-blue-light/[.08]' : 'bg-amber-500/[.07]';
     return (
-        <section className={clsx('px-4 sm:px-16 max-w-[105rem] mx-auto py-16', darkTheme)} id="section-front-back">
+        <section className={clsx('px-4 sm:px-16  mx-auto py-16', darkThemeBG)} id="section-front-back">
             <SectionFrontend/>
             <SectionBacked/>
         </section>

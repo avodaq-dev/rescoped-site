@@ -20,9 +20,9 @@ function Feature({Svg, title, description}) {
 
 export default function About() {
     const {colorMode} = useColorMode();
-    const darkTheme = colorMode === 'dark' ? 'bg-white/5' : 'bg-amber-500/5';
+    const darkThemeBG = colorMode === 'dark' ? 'bg-avo-blue-light/[.08]' : 'bg-amber-500/[.07]';
     return (
-        <section className={clsx('px-4 sm:px-16 max-w-[105rem] mx-auto py-16', darkTheme)} id="section-about">
+        <section className={clsx('px-4 sm:px-16  mx-auto py-16', darkThemeBG)} id="section-about">
             <article className="flex flex-col gap-16" >
                 <h2 className="text-2xl font-bold text-avo-pink-pink">
                     About
@@ -38,7 +38,6 @@ export default function About() {
                     <Button text={'Read more'} link={'/blog/'}/>
                 </Fade>
             </article>
-
         </section>
     );
 }
