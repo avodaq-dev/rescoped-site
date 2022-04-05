@@ -16,11 +16,12 @@ export default function HomepageHeader() {
     const {colorMode} = useColorMode();
     const darkThemehide = colorMode === 'dark' ? 'hidden' : '';
     const lightThemehide = colorMode === 'light' ? 'hidden' : '';
+    const darkThemeBG = colorMode === 'dark' ? 'bg-black/[.08]' : 'bg-amber-500/[.07]';
 
     return (
         <>
             <header id="section-header"
-                className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24 max-w-[105rem] mx-auto', styles.header)}>
+                className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24 max-w-[105rem] mx-auto', darkThemeBG)}>
                 <Fade duration={750} triggerOnce={true} delay={750}>
                     <PixiComp/>
                 </Fade>

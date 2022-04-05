@@ -4,7 +4,6 @@ import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 
 import Button from '@site/src/components/Button';
-import Dots1 from '@site/static/img/DOTS_01.svg';
 
 function Feature({Svg, title, description}) {
     return (
@@ -19,7 +18,6 @@ export default function SectionBackend() {
     return (
         <>
             <article className="flex flex-col gap-16 relative">
-                <Dots1 className="h-[4rem] w-auto absolute -top-24 right-0"/>
                 <h2 className="text-2xl font-bold text-avo-pink-pink">
                     Backend <br/>solutions
                 </h2>

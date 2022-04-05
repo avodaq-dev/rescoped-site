@@ -4,10 +4,10 @@ import clsx from "clsx";
 
 export default function DividerColor1() {
     const {colorMode} = useColorMode();
-    const darkTheme = colorMode === 'dark' ? 'bg-white/5' : 'bg-amber-500/5';
+    const darkThemeBG = colorMode === 'dark' ? 'bg-avo-blue-light/[.08]' : 'bg-amber-500/[.07]';
 
     return (
-        <div className={clsx('px-4 sm:px-16 max-w-[105rem] mx-auto')}>
+        <div className={clsx('px-4 sm:px-16 mx-auto')}>
             <div className="flex flex-col -mx-4 sm:-mx-[4rem]">
                 <div className="flex h-16">
                     <p className="flex items-center justify-center w-2/3 bg-avo-pink-pink font-bold text-xl !text-white">
@@ -17,7 +17,7 @@ export default function DividerColor1() {
                 </div>
 
                 <div className="flex h-16">
-                    <div className={clsx('w-2/3', darkTheme)}></div>
+                    <div className={clsx('w-2/3', darkThemeBG)}></div>
                     <div className="w-1/3 grow-1 bg-avo-green-green"></div>
                 </div>
             </div>
