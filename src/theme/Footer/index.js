@@ -7,13 +7,10 @@
 import React from 'react';
 import {useColorMode, useThemeConfig} from '@docusaurus/theme-common';
 import FooterLinks from '@theme/Footer/Links';
-import FooterLogo from '@theme/Footer/Logo';
-import FooterCopyright from '@theme/Footer/Copyright';
-import FooterLayout from '@theme/Footer/Layout';
+// import FooterLogo from '@theme/Footer/Logo';
+// import FooterCopyright from '@theme/Footer/Copyright';
+// import FooterLayout from '@theme/Footer/Layout';
 import clsx from "clsx";
-import {Fade} from "react-awesome-reveal";
-import {fadeProps} from "../../../../monorepo/doku_libs/props/fadeAnimation";
-import {FeatureListAbout} from "../../components/About/FeatureListAbout";
 
 function Footer() {
     const {footer} = useThemeConfig();
@@ -25,14 +22,6 @@ function Footer() {
     }
 
     const {copyright, links, logo, style} = footer;
-    // return (
-    //   <FooterLayout
-    //     style={style}
-    //     links={links && links.length > 0 && <FooterLinks links={links} />}
-    //     logo={logo && <FooterLogo logo={logo} />}
-    //     copyright={copyright && <FooterCopyright copyright={copyright} />}
-    //   />
-    // );
 
     return (
         <>
@@ -46,6 +35,15 @@ function Footer() {
             </footer>
         </>
     )
+
+    // return (
+    //   <FooterLayout
+    //     style={style}
+    //     links={links && links.length > 0 && <FooterLinks links={links} />}
+    //     logo={logo && <FooterLogo logo={logo} />}
+    //     copyright={copyright && <FooterCopyright copyright={copyright} />}
+    //   />
+    // );
 }
 
 export default React.memo(Footer);
