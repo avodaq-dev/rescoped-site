@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 @forward './fonts';
+@forward './bgDots';
 @forward '~@avo/monorepo/doku_libs/styles/components';
 @use '~@avo/monorepo/doku_libs/styles/theme';
 
@@ -8,5 +9,6 @@
 :root {
   @include theme.avo-green;
 }
+
 [data-theme='dark'] {
 }

@@ -18,7 +18,7 @@ function Feature({Svg, title, description}) {
 export default function SectionBackend() {
     return (
         <>
-            <article className="flex flex-col gap-16 relative mb-20">
+            <article className="flex flex-col gap-16 relative">
                 <Dots1 className="h-[4rem] w-auto absolute -top-24 right-0"/>
                 <h2 className="text-2xl font-bold text-avo-pink-pink">
                     Backend <br/>solutions
