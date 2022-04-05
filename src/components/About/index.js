@@ -1,14 +1,12 @@
 import React from "react";
-import clsx from "clsx";
-import {useColorMode} from "@docusaurus/theme-common";
-import Link from "@docusaurus/core/lib/client/exports/Link";
-
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
-import {link_TWClasses} from "@avo/monorepo/doku_libs/props/link_TWClasses";
-
 import {FeatureListAbout} from "./FeatureListAbout";
-import DividerImage from '@site/src/components/DividerImage';
+import clsx from "clsx";
+
+import Button from '@site/src/components/Button';
+
+import {useColorMode} from "@docusaurus/theme-common";
 
 
 function Feature({Svg, title, description}) {
@@ -22,10 +20,10 @@ function Feature({Svg, title, description}) {
 
 export default function About() {
     const {colorMode} = useColorMode();
-    const darkTheme = colorMode === 'dark' ? 'bg-white/5' : 'bg-amber-50';
+    const darkTheme = colorMode === 'dark' ? 'bg-white/5' : 'bg-amber-500/5';
     return (
-        <section className={clsx('px-4 sm:px-16 max-w-[105rem] mx-auto', darkTheme)} id="section-about">
-            <article className="flex flex-col gap-16 mb-48" >
+        <section className={clsx('px-4 sm:px-16 max-w-[105rem] mx-auto py-16', darkTheme)} id="section-about">
+            <article className="flex flex-col gap-16" >
                 <h2 className="text-2xl font-bold text-avo-pink-pink">
                     About
                 </h2>
@@ -36,15 +34,11 @@ export default function About() {
                         ))}
                     </Fade>
                 </div>
-                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} duration={750} triggerOnce={true} delay={500}>
-                    <Link {...link_TWClasses}
-                          to="#fontend-solutions">
-                        Read more
-                    </Link>
+                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} direction="up" duration={750} triggerOnce={true} delay={500}>
+                    <Button text={'Read more'} link={'/blog/'}/>
                 </Fade>
             </article>
 
-            <DividerImage/>
         </section>
     );
 }

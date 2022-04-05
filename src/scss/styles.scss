@@ -1,14 +1,14 @@
 @use 'sass:map';
 
 @forward './fonts';
+@forward './bgDots';
 @forward '~@avo/monorepo/doku_libs/styles/components';
 @use '~@avo/monorepo/doku_libs/styles/theme';
 
 // colors
 :root {
   @include theme.avo-green;
-  --ifm-footer-color: var(--ifm-color-primary);
-  --ifm-footer-link-color: white;
 }
+
 [data-theme='dark'] {
 }

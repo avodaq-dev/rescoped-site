@@ -1,0 +1,29 @@
+:root {
+  --BGdots: rgba(0, 0, 0, 15%);
+}
+
+[data-theme='dark'] {
+  --BGdots: rgba(255, 255, 255, 10%);
+}
+
+#section-front-back,
+#section-about {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-image: radial-gradient(var(--BGdots) 5%, transparent 5%);
+    background-position: 0 0, 24px 24px;
+    background-size: 24px 24px;
+  }
+}
+
+#section-front-back,
+#section-about {
+  &:before {
+    inset: 2rem;
+  }
+}
+
