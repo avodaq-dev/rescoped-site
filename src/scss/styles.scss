@@ -21,6 +21,7 @@
     inset-inline-end: 0;
     transform-origin: top left;
     transform: scaleY(1);
+    background-color: var(--ifm-color-content);
   }
 
   &:hover:before {
