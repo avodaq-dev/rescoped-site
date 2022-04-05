@@ -11,7 +11,7 @@ export default function DividerColor1() {
             <div className="flex flex-col -mx-4 sm:-mx-[4rem]">
                 <div className="flex h-16">
                     <p className="flex items-center justify-center w-2/3 bg-avo-pink-pink font-bold text-xl !text-white">
-                        Follow us on&nbsp;<a href="" className="!text-white">#twitter</a>!
+                        <span>Follow us on <a href="">#twitter</a>!</span>
                     </p>
                     <div className="w-1/3"></div>
                 </div>

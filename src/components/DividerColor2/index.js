@@ -16,7 +16,7 @@ export default function DividerColor2() {
                 </div>
                 <div className="flex h-16">
                     <p className="flex items-center justify-center w-2/3 bg-avo-green-green font-bold text-xl !text-white">
-                        Follow us on&nbsp;<a className="!text-white" href="">github</a>!
+                        <span>Check our <a className="hover:text-avo-pink-pink" href="">github</a> repo.</span>
                     </p>
                     <div className="w-1/3"></div>
                 </div>

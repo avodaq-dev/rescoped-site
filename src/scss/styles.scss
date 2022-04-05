@@ -12,3 +12,19 @@
 
 [data-theme='dark'] {
 }
+
+
+#section-header p a {
+  &:before {
+    inset-block-end: inherit;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    transform-origin: top left;
+    transform: scaleY(1);
+  }
+
+  &:hover:before {
+    transform-origin: bottom left;
+    transform: scaleY(0);
+  }
+}
