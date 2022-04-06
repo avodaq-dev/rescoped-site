@@ -20,7 +20,7 @@ function Feature({Svg, title, description}) {
 
 export default function About() {
     const {colorMode} = useColorMode();
-    const darkThemeBG = colorMode === 'dark' ? 'bg-avo-blue-light/[.08]' : 'bg-amber-500/[.07]';
+    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.07]' : 'bg-avo-blue-light/[.08]';
     return (
         <section className={clsx('px-4 sm:px-16  mx-auto py-16', darkThemeBG)} id="section-about">
             <article className="flex flex-col gap-16" >

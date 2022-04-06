@@ -15,7 +15,7 @@ import clsx from "clsx";
 function Footer() {
     const {footer} = useThemeConfig();
     const {colorMode} = useColorMode();
-    const darkThemeBG = colorMode === 'dark' ? 'bg-black/[.08]' : 'bg-amber-500/[.07]';
+    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.07]' : 'bg-black/[.08]';
 
     if (!footer) {
         return null;
