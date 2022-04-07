@@ -2,7 +2,6 @@ import React from 'react';
 import {FeatureListFrontend} from "./FeatureListFrontend";
 import {Fade} from "react-awesome-reveal";
 import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
-
 import Button from '@site/src/components/Button';
 
 
@@ -29,7 +28,7 @@ export default function SectionFrontend() {
                         ))}
                     </Fade>
                 </div>
-                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} direction="up" duration={750} triggerOnce={true} delay={500}>
+                <Fade className={'flex flex-col sm:flex-row gap-8 text-center sm:text-left'} direction="up" duration={750} triggerOnce={true}>
                     <Button text={'Read more'} link={'#fontend-solutions'}/>
                 </Fade>
             </article>
