@@ -11,7 +11,7 @@ import DividerImage from '@site/src/components/DividerImage';
 
 export default function main() {
     const {colorMode} = useColorMode();
-    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.07]' : 'bg-black/[.08]';
+    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
 
     return (
         <main className={clsx('relative max-w-[105rem] mx-auto', darkThemeBG)}>

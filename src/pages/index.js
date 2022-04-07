@@ -5,8 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomepageHeader from '@site/src/components/HomepageHeader';
 import Main from '@site/src/components/Main';
 
-import clsx from "clsx";
-
 export default function Home() {
     const {siteConfig} = useDocusaurusContext();
 
@@ -16,7 +14,6 @@ export default function Home() {
             description="Advanced tooling for cutting edge engineers">
             <HomepageHeader/>
             <Main/>
-
         </Layout>
     );
 }

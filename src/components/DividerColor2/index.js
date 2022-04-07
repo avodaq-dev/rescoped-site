@@ -1,13 +1,8 @@
 import React from "react";
-import {useColorMode} from "@docusaurus/theme-common";
-import clsx from "clsx";
 
 export default function DividerColor2() {
-    const {colorMode} = useColorMode();
-    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.07]' : 'bg-avo-blue-light/[.08]';
-
     return (
-        <div className={clsx('px-4 sm:px-16  mx-auto', darkThemeBG)}>
+        <div className="px-4 sm:px-16 mx-auto">
             <div className="flex flex-col -mx-4 sm:-mx-[4rem]">
                 <div className="flex h-16 sm:mb-16">
                     <div className="flex-grow grow-2"></div>

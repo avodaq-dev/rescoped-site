@@ -16,7 +16,7 @@ export default function HomepageHeader() {
     const {colorMode} = useColorMode();
     const darkThemehide = colorMode === 'light' ? '' : 'hidden';
     const lightThemehide = colorMode === 'light' ? 'hidden' : '';
-    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.07]' : 'bg-black/[.08]';
+    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
 
     return (
         <>
@@ -25,7 +25,7 @@ export default function HomepageHeader() {
                 <Fade duration={750} triggerOnce={true} delay={750}>
                     <PixiComp/>
                 </Fade>
-                <div className='flex flex-col gap-12 drop-shadow-none'>
+                <div className='flex flex-col gap-12 gap-8 sm:gap-12 relative'>
                     <Fade {...fadeProps}>
                         <div className="flex justify-between -mb-8">
                             <p className="text-xl sm:text-3xl font-bold">
@@ -33,7 +33,7 @@ export default function HomepageHeader() {
                             </p>
                         </div>
 
-                        <h2 className="text-3xl sm:text-5xl  md:text-7xl !leading-tight font-normal md:font-light">
+                        <h2 className="text-3xl sm:text-5xl  md:text-7xl !leading-tight font-normal md:font-light pr-8 sm:pr-16">
                             Advanced tooling for <br className='hidden sm:block'/> cutting edge engineers.
                         </h2>
                         <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>
@@ -51,7 +51,7 @@ export default function HomepageHeader() {
                                 <ReLogoColor title="rescoped Logo" className={clsx('relogo mt-auto', darkThemehide)}/>
                                 <ReLogoWhite title="rescoped Logo" className={clsx('relogo mt-auto', lightThemehide)}/>
                             </h1>
-                            <p className={clsx('font-bold text-xl md:absolute md:top-0 md:right-0 md:-mr-3', styles.md_verticalLR)}>
+                            <p className={clsx('font-bold text-xl absolute bottom-5 sm:top-0 right-0 sm:-mr-3', styles.md_verticalLR)}>
                                 Give us a star on <a href="">GitHub</a>!
                             </p>
                         </Fade>
