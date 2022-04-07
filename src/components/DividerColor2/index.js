@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export default function DividerColor2() {
     const {colorMode} = useColorMode();
-    const darkThemeBG = colorMode === 'dark' ? 'bg-avo-blue-light/[.08]' : 'bg-amber-500/[.07]';
+    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.07]' : 'bg-avo-blue-light/[.08]';
 
     return (
         <div className={clsx('px-4 sm:px-16  mx-auto', darkThemeBG)}>

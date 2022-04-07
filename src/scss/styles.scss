@@ -13,7 +13,6 @@
 [data-theme='dark'] {
 }
 
-
 #section-header p a {
   &:before {
     inset-block-end: inherit;
@@ -21,6 +20,7 @@
     inset-inline-end: 0;
     transform-origin: top left;
     transform: scaleY(1);
+    background-color: var(--ifm-color-content);
   }
 
   &:hover:before {
