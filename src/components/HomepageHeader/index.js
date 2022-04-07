@@ -34,7 +34,7 @@ export default function HomepageHeader() {
                         </div>
 
                         <h2 className="text-3xl sm:text-5xl  md:text-7xl !leading-tight font-normal md:font-light pr-8 sm:pr-16">
-                            Advanced tooling for <br className='hidden sm:block'/> cutting edge engineers.
+                            Advanced tooling for <br className='hidden md:block'/> cutting edge engineers.
                         </h2>
                         <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>
                             <Button text={'Solutions'} link={'#section-front-back'}/>
