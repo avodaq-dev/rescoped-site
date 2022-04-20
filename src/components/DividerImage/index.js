@@ -15,7 +15,6 @@ export default function DividerImage() {
                 <div className='flex h-16'>
                     <div className='w-1/3 bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green'></div>
                     <div className="w-2/3"></div>
-
                 </div>
                 <div className='flex h-40 sm:h-60 md:h-80'>
                     <div className="w-1/3"></div>

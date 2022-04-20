@@ -10,7 +10,7 @@ import BGimg3 from '@site/static/img/BGimg_03.jpg';
 import BGimg4 from '@site/static/img/BGimg_04.jpg';
 import BGimg5 from '@site/static/img/BGimg_05.jpg';
 
-export default function TestComp() {
+export default function PixiComp() {
     return (
         <BrowserOnly fallback={<div>Loading...</div>}>
             {() => {
@@ -28,8 +28,7 @@ export default function TestComp() {
                         containers = [],
                         channelsContainer = [],
                         displacementFilters = [],
-                        brushes = [],
-                        MouseIn;
+                        brushes = [];
 
                     // CHANNEL FILTERS
                     let redChannelFilter = new PIXI.filters.ColorMatrixFilter();
@@ -116,18 +115,18 @@ export default function TestComp() {
                         app.stage.interactive = true;
 
                         const headerElm = document.getElementById('section-header');
+
                         headerElm.addEventListener('mouseenter', () => {
-                            MouseIn = true;
-                        });
-                        headerElm.addEventListener('mouseenter', () => {
-                            MouseIn = true;
+                            mouseIn();
                         });
                         headerElm.addEventListener('mouseleave', () => {
-                            MouseIn = false;
+                            mouseLeave();
+                            app.stage.removeAllListeners();
                         });
 
-                        app.stage.on("pointermove", (ev) => {
-                            if (MouseIn) {
+
+                        const mouseIn = () => {
+                            app.stage.on("pointermove", (ev) => {
                                 let x = ev.data.global.x;
                                 let y = ev.data.global.y;
 
@@ -140,13 +139,28 @@ export default function TestComp() {
                                     });
                                     brushes[i].position = ev.data.global;
                                 }
-                            } else {
-                                for (let i = 0, len = containers.length; i < len; i++) {
-                                    brushes[i].position = {x: 15000, y: 15000};
-                                }
-                            }
+                            });
+                        }
 
-                        });
+                        const mouseLeave = () => {
+                            let headY = headerElm.getBoundingClientRect().y + headerElm.getBoundingClientRect().height * 0.5;
+                            for (let i = 0, len = containers.length; i < len; i++) {
+                                gsap.gsap.to(brushes[i].position, {
+                                    duration: 1,
+                                    x: headerElm.getBoundingClientRect().width * 0.5,
+                                    y: headY,
+                                    ease: "power2.easeInOut",
+                                });
+                                gsap.gsap.to(displacementFilters[i].scale, {
+                                    duration: 3.5,
+                                    x: 0,
+                                    y: 0,
+                                    ease: "power2.easeInOut",
+                                });
+                            }
+                        }
+
+
                     })
 
                     // Add app to DOM
