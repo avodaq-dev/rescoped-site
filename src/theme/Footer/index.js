@@ -16,6 +16,7 @@ function Footer() {
     const {footer} = useThemeConfig();
     const {colorMode} = useColorMode();
     const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
+    const darkThemeCol = colorMode === 'light' ? 'bg-amber-500/[.15] text-black' : 'bg-avo-blue-dark text-white';
 
     if (!footer) {
         return null;
@@ -25,7 +26,7 @@ function Footer() {
 
     return (
         <>
-            <footer className={clsx('px-4 sm:px-16 w-full max-w-[105rem] mx-auto py-16 bg-avo-pink-pink', darkThemeBG)}
+            <footer className={clsx('px-4 sm:px-16 w-full max-w-[105rem] mx-auto py-16', darkThemeBG)}
                     id="section-contact">
                 <div className="flex flex-col gap-16">
                     <h2 className="text-2xl font-bold text-avo-pink-pink">
@@ -35,8 +36,7 @@ function Footer() {
                 </div>
             </footer>
 
-            <p
-                className='flex p-4 w-full bg-avo-blue-dark justify-center items-center'>
+            <p className={clsx('flex p-4 w-full justify-center items-center', darkThemeCol)}>
                 <span>© {new Date().getFullYear()} rescoped Wiki • Built with Docusaurus by <a className="underline-thin" href="">avodaq AG</a></span>
             </p>
         </>

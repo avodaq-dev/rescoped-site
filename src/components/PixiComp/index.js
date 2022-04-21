@@ -28,7 +28,8 @@ export default function PixiComp() {
                         containers = [],
                         channelsContainer = [],
                         displacementFilters = [],
-                        brushes = [];
+                        brushes = [],
+                        isOver = false;
 
                     // CHANNEL FILTERS
                     let redChannelFilter = new PIXI.filters.ColorMatrixFilter();
@@ -51,12 +52,12 @@ export default function PixiComp() {
                         width: 1280,
                         height: 853,
                         backgroundColor: 0x32dcab,
-                        autoStart: false,
+                        // autoStart: false,
                     });
 
                     for (let i = 0; i < 3; i++) {
                         rt.push(
-                            PIXI.RenderTexture.create(app.screen.width, app.screen.height),
+                            PIXI.RenderTexture.create({width: app.screen.width, height: app.screen.height}),
                         );
                         rts.push(rt);
                     }
@@ -84,7 +85,8 @@ export default function PixiComp() {
                     // LOADER
                     app.loader.load((loader, resources) => {
                         let tempBg = new PIXI.Sprite(resources.bg.texture);
-                        tempBg.width = app.screen.width;
+
+                        tempBg.width = app.screen.width * 1.2;
                         tempBg.height = app.screen.height * 1.5;
 
                         app.renderer.render(tempBg, rt[0]);
@@ -109,64 +111,74 @@ export default function PixiComp() {
                         brushes[1].anchor.set(0.6);
                         brushes[2].anchor.set(0.4);
 
+                        app.ticker.add(function (delta) {
+                            brushes[0].rotation -= 0.01 * delta;
+                            brushes[1].rotation -= 0.01 * delta;
+                            brushes[2].rotation -= 0.01 * delta;
+                        });
+
                         containers[1].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
                         containers[2].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
 
                         app.stage.interactive = true;
 
-                        const headerElm = document.getElementById('section-header');
-
-                        headerElm.addEventListener('mouseenter', () => {
-                            mouseIn();
-                        });
-                        headerElm.addEventListener('mouseleave', () => {
-                            mouseLeave();
-                            app.stage.removeAllListeners();
-                        });
-
-
-                        const mouseIn = () => {
+                        const mouseMove = () => {
                             app.stage.on("pointermove", (ev) => {
                                 let x = ev.data.global.x;
                                 let y = ev.data.global.y;
-
                                 for (let i = 0, len = containers.length; i < len; i++) {
                                     gsap.gsap.to(displacementFilters[i].scale, {
-                                        duration: .5,
-                                        x: Math.atan(x - brushes[i].x) * 50,
-                                        y: Math.atan(y - brushes[i].y) * 50,
+                                        duration: 1,
+                                        x: Math.atan(x - brushes[i].x) * 55,
+                                        y: Math.atan(y - brushes[i].y) * 55,
                                         ease: "power2.easeInOut",
                                     });
-                                    brushes[i].position = ev.data.global;
+
+                                    gsap.gsap.to(brushes[i].position, {
+                                        duration: 1.5,
+                                        x: ev.data.global.x,
+                                        y: ev.data.global.y,
+                                        ease: "power2.easeInOut",
+                                    });
                                 }
                             });
                         }
+                        const mouseStop = () => {
+                            let centerX = (headerElm.offsetLeft + headerElm.offsetWidth / 2);
+                            let centerY = (headerElm.offsetTop + headerElm.offsetHeight / 2);
 
-                        const mouseLeave = () => {
-                            let headY = headerElm.getBoundingClientRect().y + headerElm.getBoundingClientRect().height * 0.5;
                             for (let i = 0, len = containers.length; i < len; i++) {
                                 gsap.gsap.to(brushes[i].position, {
-                                    duration: 1,
-                                    x: headerElm.getBoundingClientRect().width * 0.5,
-                                    y: headY,
+                                    duration: 2,
+                                    x: centerX,
+                                    y: centerY,
                                     ease: "power2.easeInOut",
                                 });
                                 gsap.gsap.to(displacementFilters[i].scale, {
-                                    duration: 3.5,
-                                    x: 0,
-                                    y: 0,
+                                    duration: 3,
+                                    x: 25,
+                                    y: 25,
                                     ease: "power2.easeInOut",
                                 });
                             }
                         }
-
-
+                        const headerElm = document.getElementById('section-header');
+                        headerElm.addEventListener('mouseenter', () => {
+                            mouseMove();
+                        });
+                        headerElm.addEventListener('mouseleave', () => {
+                            app.stage.off("pointermove", null);
+                            mouseStop();
+                        });
+                        mouseMove();
                     })
+
+
+                    // Start the PixiJS app
+                    app.start();
 
                     // Add app to DOM
                     ref.current.appendChild(app.view);
-                    // Start the PixiJS app
-                    app.start();
                     return () => {
                         app.destroy(true, true);
                     };
@@ -178,6 +190,7 @@ export default function PixiComp() {
                          data-img={IMGswap}
                          data-displace={Displace}
                     />
+
                 );
             }}
         </BrowserOnly>
