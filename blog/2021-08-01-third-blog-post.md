@@ -1,11 +1,11 @@
 ---
-slug: first-blog-post
-title: First Blog Post
+slug: third-blog-post
+title: Third Blog Post
 authors:
-  name: Arthur Ersosi
-  title: rescoped Core Team
-  url: https://github.com/aersosi
-  image_url: https://github.com/aersosi.png
+    name: Arthur Ersosi
+    title: rescoped Core Team
+    url: https://github.com/aersosi
+    image_url: https://github.com/aersosi.png
 tags: [rescoped, frontend, avodaq]
 ---
 
