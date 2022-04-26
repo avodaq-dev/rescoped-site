@@ -28,7 +28,6 @@ export default function About() {
                 </Reveal>
             </article>
         </section>
-
     );
 }
 
