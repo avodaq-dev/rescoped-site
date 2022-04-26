@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrescoped=self.webpackChunkrescoped||[]).push([[44],{6055:function(e){e.exports=JSON.parse('{"allTagsPath":"/rescoped-site/blog/tags","name":"hello","count":2,"permalink":"/rescoped-site/blog/tags/hello"}')}}]);

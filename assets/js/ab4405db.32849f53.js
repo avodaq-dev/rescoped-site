@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrescoped=self.webpackChunkrescoped||[]).push([[302],{7601:function(e){e.exports=JSON.parse('{"allTagsPath":"/rescoped-site/blog/tags","name":"frontend","count":3,"permalink":"/rescoped-site/blog/tags/frontend"}')}}]);

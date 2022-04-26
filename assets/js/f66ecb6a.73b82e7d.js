@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrescoped=self.webpackChunkrescoped||[]).push([[564],{8843:function(e){e.exports=JSON.parse('{"permalink":"/rescoped-site/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
