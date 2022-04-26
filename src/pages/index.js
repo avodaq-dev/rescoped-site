@@ -8,6 +8,18 @@ import Main from '@site/src/components/Main';
 export default function Home() {
     const {siteConfig} = useDocusaurusContext();
 
+    const consoleLogStyle = [
+        "background-color: #000000",
+        "color: white",
+        "display: block",
+        "line-height: 24px",
+        "text-align: center",
+        "border: 1px solid #ffffff",
+        "font-weight: bold",
+    ].join(";");
+
+    console.info("dev by: %c Arthur Ersosi ", consoleLogStyle);
+
     return (
         <Layout
             title={`${siteConfig.title}`}

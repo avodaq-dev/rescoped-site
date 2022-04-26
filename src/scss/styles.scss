@@ -28,3 +28,12 @@
     transform: scaleY(0);
   }
 }
+
+
+.article-grid {
+  & :not(:first-child, :last-child) {
+    @media (min-width: 996px) {
+      grid-column: auto;
+    }
+  }
+}

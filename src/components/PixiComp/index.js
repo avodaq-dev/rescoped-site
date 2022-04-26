@@ -3,14 +3,14 @@ import clsx from "clsx";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from "../PixiComp/styles.module.scss";
 
-import Displace from '@site/static/img/DP_02.jpg';
+import Displace from '@site/static/img/DP_03.jpg';
 import BGimg1 from '@site/static/img/BGimg_01.jpg';
 import BGimg2 from '@site/static/img/BGimg_02.jpg';
 import BGimg3 from '@site/static/img/BGimg_03.jpg';
 import BGimg4 from '@site/static/img/BGimg_04.jpg';
 import BGimg5 from '@site/static/img/BGimg_05.jpg';
 
-export default function TestComp() {
+export default function PixiComp() {
     return (
         <BrowserOnly fallback={<div>Loading...</div>}>
             {() => {
@@ -29,7 +29,7 @@ export default function TestComp() {
                         channelsContainer = [],
                         displacementFilters = [],
                         brushes = [],
-                        MouseIn;
+                        isOver = false;
 
                     // CHANNEL FILTERS
                     let redChannelFilter = new PIXI.filters.ColorMatrixFilter();
@@ -52,12 +52,12 @@ export default function TestComp() {
                         width: 1280,
                         height: 853,
                         backgroundColor: 0x32dcab,
-                        autoStart: false,
+                        // autoStart: false,
                     });
 
                     for (let i = 0; i < 3; i++) {
                         rt.push(
-                            PIXI.RenderTexture.create(app.screen.width, app.screen.height),
+                            PIXI.RenderTexture.create({width: app.screen.width, height: app.screen.height}),
                         );
                         rts.push(rt);
                     }
@@ -85,7 +85,8 @@ export default function TestComp() {
                     // LOADER
                     app.loader.load((loader, resources) => {
                         let tempBg = new PIXI.Sprite(resources.bg.texture);
-                        tempBg.width = app.screen.width;
+
+                        tempBg.width = app.screen.width * 1.2;
                         tempBg.height = app.screen.height * 1.5;
 
                         app.renderer.render(tempBg, rt[0]);
@@ -110,49 +111,77 @@ export default function TestComp() {
                         brushes[1].anchor.set(0.6);
                         brushes[2].anchor.set(0.4);
 
+                        app.ticker.add(function (delta) {
+                            brushes[0].rotation -= 0.005 * delta;
+                            brushes[1].rotation -= 0.005 * delta;
+                            brushes[2].rotation -= 0.005 * delta;
+                        });
+
                         containers[1].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
                         containers[2].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
 
                         app.stage.interactive = true;
 
-                        const headerElm = document.getElementById('section-header');
-                        headerElm.addEventListener('mouseenter', () => {
-                            MouseIn = true;
-                        });
-                        headerElm.addEventListener('mouseenter', () => {
-                            MouseIn = true;
-                        });
-                        headerElm.addEventListener('mouseleave', () => {
-                            MouseIn = false;
-                        });
-
-                        app.stage.on("pointermove", (ev) => {
-                            if (MouseIn) {
+                        const mouseMove = () => {
+                            app.stage.on("pointermove", (ev) => {
                                 let x = ev.data.global.x;
                                 let y = ev.data.global.y;
-
                                 for (let i = 0, len = containers.length; i < len; i++) {
+
                                     gsap.gsap.to(displacementFilters[i].scale, {
-                                        duration: .5,
-                                        x: Math.atan(x - brushes[i].x) * 50,
-                                        y: Math.atan(y - brushes[i].y) * 50,
+                                        duration: 1,
+                                        // x: Math.atan(x - brushes[i].x) * 55,
+                                        // y: Math.atan(y - brushes[i].y) * 55,
+                                        x: 80,
+                                        y: 80,
                                         ease: "power2.easeInOut",
                                     });
-                                    brushes[i].position = ev.data.global;
-                                }
-                            } else {
-                                for (let i = 0, len = containers.length; i < len; i++) {
-                                    brushes[i].position = {x: 15000, y: 15000};
-                                }
-                            }
 
+                                    gsap.gsap.to(brushes[i].position, {
+                                        duration: 1.5,
+                                        x: ev.data.global.x,
+                                        y: ev.data.global.y,
+                                        ease: "power2.easeInOut",
+                                    });
+                                }
+                            });
+                        }
+                        const mouseStop = () => {
+                            let centerX = (headerElm.offsetLeft + headerElm.offsetWidth / 2);
+                            let centerY = (headerElm.offsetTop + headerElm.offsetHeight / 2);
+
+                            for (let i = 0, len = containers.length; i < len; i++) {
+                                gsap.gsap.to(brushes[i].position, {
+                                    duration: 2,
+                                    x: centerX,
+                                    y: centerY,
+                                    ease: "power2.easeInOut",
+                                });
+                                gsap.gsap.to(displacementFilters[i].scale, {
+                                    duration: 3,
+                                    x: 25,
+                                    y: 25,
+                                    ease: "power2.easeInOut",
+                                });
+                            }
+                        }
+                        const headerElm = document.getElementById('section-header');
+                        headerElm.addEventListener('mouseenter', () => {
+                            mouseMove();
                         });
+                        headerElm.addEventListener('mouseleave', () => {
+                            app.stage.off("pointermove", null);
+                            mouseStop();
+                        });
+                        mouseMove();
                     })
+
+
+                    // Start the PixiJS app
+                    app.start();
 
                     // Add app to DOM
                     ref.current.appendChild(app.view);
-                    // Start the PixiJS app
-                    app.start();
                     return () => {
                         app.destroy(true, true);
                     };
@@ -164,6 +193,7 @@ export default function TestComp() {
                          data-img={IMGswap}
                          data-displace={Displace}
                     />
+
                 );
             }}
         </BrowserOnly>
