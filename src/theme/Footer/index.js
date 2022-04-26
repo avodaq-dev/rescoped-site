@@ -36,7 +36,7 @@ function Footer() {
                 </div>
             </footer>
 
-            <p className={clsx('flex p-4 w-full justify-center items-center', darkThemeCol)}>
+            <p className={clsx('flex p-4 w-full justify-center items-center max-w-[105rem] mx-auto', darkThemeCol)}>
                 <span>© {new Date().getFullYear()} rescoped Wiki • Built with Docusaurus by <a className="underline-thin" href="">avodaq AG</a></span>
             </p>
         </>

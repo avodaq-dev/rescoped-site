@@ -1,28 +1,20 @@
 :root {
-  --BGdots: rgba(0, 0, 0, 16%);
+  --BGdots: rgba(0, 0, 0, 14%);
 }
 
 [data-theme='dark'] {
-  --BGdots: rgba(255, 255, 255, 13%);
+  --BGdots: rgba(255, 255, 255, 11%);
 }
 
 #section-front-back,
 #section-about {
   position: relative;
-
   &:before {
     content: "";
     position: absolute;
     z-index: -1;
-    background-image: radial-gradient(var(--BGdots) 5%, transparent 5%);
-    background-position: 0 0, 24px 24px;
+    background-image: radial-gradient(var(--BGdots) 8%, transparent 8%);
     background-size: 24px 24px;
-  }
-}
-
-#section-front-back,
-#section-about {
-  &:before {
     inset: 2rem;
   }
 }
