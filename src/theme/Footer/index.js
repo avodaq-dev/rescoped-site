@@ -15,8 +15,7 @@ import clsx from "clsx";
 function Footer() {
     const {footer} = useThemeConfig();
     const {colorMode} = useColorMode();
-    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
-    const darkThemeCol = colorMode === 'light' ? 'bg-amber-500/[.15] text-black' : 'bg-avo-blue-dark text-white';
+    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.15]' : 'bg-avo-blue-dark';
 
     if (!footer) {
         return null;
@@ -35,9 +34,8 @@ function Footer() {
                     <FooterLinks links={links}/>
                 </div>
             </footer>
-
-            <p className={clsx('flex p-4 w-full justify-center items-center max-w-[105rem] mx-auto', darkThemeCol)}>
-                <span>© {new Date().getFullYear()} rescoped Wiki • Built with Docusaurus by <a className="underline-thin" href="">avodaq AG</a></span>
+            <p className={clsx('flex p-4 w-full justify-center items-center max-w-[105rem] mx-auto bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green')}>
+                <span className="text-white font-medium">© {new Date().getFullYear()} rescoped Wiki • Built with Docusaurus by <a className="underline-thin" href="">avodaq AG</a></span>
             </p>
         </>
     )

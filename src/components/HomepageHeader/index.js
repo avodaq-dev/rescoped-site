@@ -28,7 +28,7 @@ export default function HomepageHeader() {
                 <div className='flex flex-col gap-12 gap-8 sm:gap-12 relative'>
                     <Reveal keyframes={customKeyframes} {...fadeUpProps}>
                         <div className="flex justify-between -mb-8">
-                            <p className="text-xl sm:text-3xl font-bold">
+                            <p className="text-xl sm:text-3xl font-bold mb-4">
                                 Make good even better
                             </p>
                         </div>
