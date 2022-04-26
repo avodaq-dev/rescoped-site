@@ -3,7 +3,7 @@ import clsx from "clsx";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from "../PixiComp/styles.module.scss";
 
-import Displace from '@site/static/img/DP_02.jpg';
+import Displace from '@site/static/img/DP_03.jpg';
 import BGimg1 from '@site/static/img/BGimg_01.jpg';
 import BGimg2 from '@site/static/img/BGimg_02.jpg';
 import BGimg3 from '@site/static/img/BGimg_03.jpg';
@@ -112,9 +112,9 @@ export default function PixiComp() {
                         brushes[2].anchor.set(0.4);
 
                         app.ticker.add(function (delta) {
-                            brushes[0].rotation -= 0.01 * delta;
-                            brushes[1].rotation -= 0.01 * delta;
-                            brushes[2].rotation -= 0.01 * delta;
+                            brushes[0].rotation -= 0.005 * delta;
+                            brushes[1].rotation -= 0.005 * delta;
+                            brushes[2].rotation -= 0.005 * delta;
                         });
 
                         containers[1].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
@@ -127,10 +127,13 @@ export default function PixiComp() {
                                 let x = ev.data.global.x;
                                 let y = ev.data.global.y;
                                 for (let i = 0, len = containers.length; i < len; i++) {
+
                                     gsap.gsap.to(displacementFilters[i].scale, {
                                         duration: 1,
-                                        x: Math.atan(x - brushes[i].x) * 55,
-                                        y: Math.atan(y - brushes[i].y) * 55,
+                                        // x: Math.atan(x - brushes[i].x) * 55,
+                                        // y: Math.atan(y - brushes[i].y) * 55,
+                                        x: 80,
+                                        y: 80,
                                         ease: "power2.easeInOut",
                                     });
 

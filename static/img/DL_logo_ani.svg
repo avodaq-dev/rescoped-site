@@ -1,0 +1,35 @@
+<svg width="32" height="32" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" id="ani">
+<path
+    d="M0 4C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V30C34 32.2091 32.2091 34 30 34H4C1.79086 34 0 32.2091 0 30V4Z"
+    fill="#444444"/>
+  <path
+    d="M5.08203 5.5V19.5H9.95326C13.9807 19.5 17.2026 16.489 17.2026 12.5C17.2026 8.51096 13.9807 5.5 9.95326 5.5H5.08203ZM9.72313 8.49178C12.0437 8.49178 13.5587 10.3521 13.5587 12.5C13.5587 14.6479 12.0437 16.5082 9.68477 16.5082H8.72587V8.49178H9.72313Z"
+    fill="white">
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0 0; 0 -3; 0 2; 0 0"
+                      begin="ani.mouseenter"
+                      dur="500ms"
+                      repeatCount="1"
+                      keySplines="0.25 0.1 0.25 1"
+    />
+  </path>
+  <path d="M20.0002 19.5H28.918V16.5082H23.644V5.5H20.0002V19.5Z" fill="white">
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0 0; 0 -3; 0 2; 0 0"
+                      begin="ani.mouseenter + 200ms"
+                      dur="500ms"
+                      repeatCount="1"
+                      keySplines="0.25 0.1 0.25 1"
+    />
+  </path>
+  <path d="M28.918 23.5H5.08203V28.5H28.918V23.5Z" fill="url(#grad_01)"/>
+  <defs>
+    <linearGradient id="grad_01" x1="28.918" y1="26" x2="5.08203" y2="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8619e6"/>
+      <stop offset="0.65" stop-color="#3088f5"/>
+      <stop offset="1" stop-color="#06f9d8"/>
+    </linearGradient>
+  </defs>
+</svg>

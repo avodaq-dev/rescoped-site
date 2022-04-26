@@ -3,8 +3,8 @@ import {useColorMode} from "@docusaurus/theme-common";
 import clsx from "clsx";
 import styles from "./index.module.scss";
 
-import {Fade} from "react-awesome-reveal";
-import {fadeProps} from "@avo/monorepo/doku_libs/props/fadeAnimation";
+import {Reveal, Fade} from "react-awesome-reveal";
+import {fadeUpProps, fadeProps, customKeyframes} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 
 import PixiComp from '@site/src/components/PixiComp';
 import Button from '@site/src/components/Button';
@@ -22,11 +22,11 @@ export default function HomepageHeader() {
         <>
             <header id="section-header"
                 className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24 max-w-[105rem] mx-auto', darkThemeBG)}>
-                <Fade duration={750} triggerOnce={true} delay={750}>
+                <Fade {...fadeProps} delay={750}>
                     <PixiComp/>
                 </Fade>
                 <div className='flex flex-col gap-12 gap-8 sm:gap-12 relative'>
-                    <Fade {...fadeProps}>
+                    <Reveal keyframes={customKeyframes} {...fadeUpProps}>
                         <div className="flex justify-between -mb-8">
                             <p className="text-xl sm:text-3xl font-bold">
                                 Make good even better
@@ -40,11 +40,10 @@ export default function HomepageHeader() {
                             <Button text={'Solutions'} link={'#section-front-back'}/>
                             <Button text={'About rescoped'} link={'#section-about'}/>
                         </div>
-                    </Fade>
-
+                    </Reveal>
 
                     <div className="flex flex-col gap-4 md:mt-24">
-                        <Fade cascade={'true'} triggerOnce={'true'} damping={0.25} duration={750} delay={1000}>
+                        <Fade {...fadeProps} delay={1000}>
                             <Dots2
                                 className="hidden sm:block h-[4rem] md:h-[5.75rem] w-auto absolute bottom-[0.35rem] right-0 md:left-0 rotate-[270deg] md:rotate-0"/>
                             <h1 className="w-[10rem] sm:w-[16rem] md:w-[24rem] md:absolute md:bottom-0 md:right-0">
