@@ -6,17 +6,18 @@ import {useColorMode} from "@docusaurus/theme-common";
 export default function BlogComp({children, sidebar, toc}) {
     const {colorMode} = useColorMode();
     const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
+
     const hasSidebar = sidebar && sidebar.items.length > 0;
 
     return (
         <div className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-72 max-w-[105rem] mx-auto', darkThemeBG)}>
             <div className="flex gap-16">
                 {hasSidebar && (
-                    <aside className="min-w-[12rem]">
+                    <aside className="hidden md:block w-full max-w-[12rem]">
                         <BlogSidebar sidebar={sidebar}/>
                     </aside>
                 )}
-                <main itemScope itemType="http://schema.org/Blog" className="min-w-[56rem]">
+                <main itemScope itemType="http://schema.org/Blog" className="w-full max-w-[64rem]">
                     {children}
                 </main>
             </div>
