@@ -4,7 +4,7 @@ export default function DividerColor2() {
     return (
         <div className="px-4 sm:px-16 mx-auto">
             <div className="flex flex-col -mx-4 sm:-mx-[4rem]">
-                <div className="flex h-1 sm:h-16 sm:mb-16">
+                <div className="hidden sm:flex h-16 sm:mb-16">
                     <div className="sm:w-9/12"></div>
                     <div
                         className="w-full sm:w-4/12 bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green"></div>

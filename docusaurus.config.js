@@ -65,7 +65,7 @@ const config = {
                 items: [
                     {
                         label: 'learn',
-                        position: 'left',
+                        position: 'right',
                         items: [
                             {
                                 href: 'https://avodaq-dev.github.io/hyper-docs/',
@@ -87,8 +87,8 @@ const config = {
 
                         ],
                     },
-                    {to: 'blog', label: 'about', position: 'left'},
-                    {to: '#section-contact', label: 'contact', position: 'left'},
+                    {to: 'blog', label: 'about', position: 'right'},
+                    {to: '#section-contact', label: 'contact', position: 'right'},
                 ],
             },
             footer: {
