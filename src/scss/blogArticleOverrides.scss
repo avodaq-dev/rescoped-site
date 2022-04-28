@@ -4,7 +4,10 @@
 article[itemprop="blogPost"] {
   background: white;
   border-radius: 0.5rem;
-  padding: 2rem;
+  padding: 1rem;
+  @media (min-width: 600px) {
+    padding: 2rem;
+  }
   margin-bottom: 1rem !important;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   header {
