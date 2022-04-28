@@ -2,6 +2,8 @@
 
 @forward './fonts';
 @forward './bgDots';
+@forward './articleGrid';
+@forward './blogArticleOverrides';
 @forward '~@avo/monorepo/doku_libs/styles/components';
 @use '~@avo/monorepo/doku_libs/styles/theme';
 
@@ -30,10 +32,4 @@
 }
 
 
-.article-grid {
-  & :not(:first-child, :last-child) {
-    @media (min-width: 996px) {
-      grid-column: auto;
-    }
-  }
-}
+

@@ -1,0 +1,98 @@
+@use '~@avo/monorepo/doku_libs/styles/abstracts/palettes' as p;
+
+
+article[itemprop="blogPost"] {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  @media (min-width: 600px) {
+    padding: 2rem;
+  }
+  margin-bottom: 1rem !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  header {
+    position: relative;
+  }
+}
+
+[data-theme='dark'] article[itemprop="blogPost"] {
+  background: p.$white-8;
+}
+
+
+article[itemprop="blogPost"] {
+
+
+  header {
+    h1, h2 {
+      font-size: 2rem;
+      @media (min-width: 996px) {
+        padding-right: 14rem;
+      }
+    }
+
+    [class*="blogPostData"] {
+      color: p.$avo-green;
+      margin: 0.25rem !important;
+      font-weight: 600;
+      time {
+        color: var(--ifm-font-color-base);
+      }
+    }
+
+    .avatar {
+      .avatar__intro {
+        font-weight: 600;
+      }
+      @media (min-width: 996px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  // body
+
+  [itemprop="articleBody"] {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // footer
+
+  footer {
+    .col > b {
+      display: none;
+    }
+
+    ul.margin-left--sm {
+      margin-left: 0 !important;
+    }
+
+    .text--right a {
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      color: p.$avo-green;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background: rgba(p.$avo-green, 0.16);
+      }
+    }
+
+  }
+
+
+}
+
+
+nav.pagination-nav {
+  .pagination-nav__link {
+    border: none;
+    padding: 0;
+  }
+
+  .pagination-nav__sublabel {
+    opacity: 0.5;
+  }
+}
