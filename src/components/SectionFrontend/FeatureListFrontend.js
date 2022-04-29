@@ -1,33 +1,35 @@
 const React = require("react");
 export const FeatureListFrontend = [
     {
-        title: 'Frotend Feature 1',
+        title: 'Robust & Performant',
         Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
         description: (
             <>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi consequatur dicta dignissimos dolor
-                dolorem iusto, minus mollitia nemo perferendis perspiciatis quisquam tenetur?
+                Our solutions are developed with performance in mind, strictly typed and thoroughly tested to ensure it
+                works exactly as expected.
             </>
         ),
     },
     {
-        title: 'Frotend Feature 2',
-        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-        description: (
-            <>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores dolore expedita hic
-                neque pariatur ratione, temporibus unde vero consectetur adipisicing elit.
-            </>
-        ),
-    },
-    {
-        title: 'Frotend Feature 3',
+        title: 'Scalable',
         Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
         description: (
             <>
-                Alias aliquam dignissimos dolorem esse est exercitationem explicabo officia
-                quae, repellendus repudiandae sit, suscipit velit veniam vero voluptatum?
+                We provide centralized management and control that makes it easy to keep track of changes, dependencies,
+                and versions. Increased code reuse, reducing the amount of code that needs to be written from scratch,
+                making it easier to update and maintain. Faster development cycles that help teams become more agile.
             </>
         ),
     },
+    {
+        title: 'Flexible',
+        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+        description: (
+            <>
+                Because our tools are designed to be data-agnostic, they can be used in any environment, easily switched
+                between different data sources, and adapted to meet specific requirements.
+            </>
+        ),
+    },
+
 ];
