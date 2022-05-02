@@ -14,7 +14,7 @@ export default function main() {
     const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
 
     return (
-        <main className={clsx('relative max-w-[105rem] mx-auto', darkThemeBG)}>
+        <main className={clsx('relative', darkThemeBG)}>
             <DividerColor1/>
             <SectionFrontendBackend/>
             <DividerColor2/>

@@ -1,32 +1,35 @@
 const React = require("react");
 export const FeatureListAbout = [
     {
-        title: 'About Feature 1',
+        title: 'Reliable',
         Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
         description: (
             <>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi consequatur dicta dignissimos dolor
-                dolorem iusto, minus mollitia nemo perferendis perspiciatis quisquam tenetur?
+                Because the open-source community is huge and active, more people are looking for bugs and fixing them
+                more often.
             </>
         ),
     },
+
+
     {
-        title: 'About Feature 2',
-        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+        title: 'Secure',
+        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
         description: (
             <>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores dolore expedita hic
-                neque pariatur ratione, temporibus unde vero consectetur adipisicing elit.
+                Our code is open for all to see, so more developers can identify and fix potential security
+                vulnerabilities faster.
             </>
         ),
     },
+
     {
-        title: 'About Feature 3',
-        Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+        title: 'Affordable',
+        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
         description: (
             <>
-                Alias aliquam dignissimos dolorem esse est exercitationem explicabo officia
-                quae, repellendus repudiandae sit, suscipit velit veniam vero voluptatum?
+                Because open source products are not restricted by licensing agreements, they are affordable for people
+                and organizations of all sizes.
             </>
         ),
     },

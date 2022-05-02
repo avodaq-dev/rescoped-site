@@ -7,8 +7,8 @@ import Button from '@site/src/components/Button';
 function Feature({Svg, title, description}) {
     return (
         <>
-            <h3 className="font-bold text-lg mb-4">{title}</h3>
-            <p className='text-lg'>{description}</p>
+            <h3 className="font-bold text-xl mb-8">{title}</h3>
+            <p className='text-lg max-w-[74ch]'>{description}</p>
         </>
     );
 }
@@ -16,17 +16,19 @@ function Feature({Svg, title, description}) {
 export default function SectionFrontend() {
     return (
         <>
-            <article className='grid grid-cols-3 gap-16 lg:gap-24 article-grid'>
+            <article className='grid grid-cols-3 gap-16 article-grid'>
                 <Reveal keyframes={customKeyframes} {...fadeUpProps} className={`col-span-3 ease-out`}>
-
-                    <h2 className="text-2xl font-bold text-avo-pink-pink">
+                    <h2 className="text-3xl sm:text-6xl !leading-tight font-medium sm:font-light pr-8 sm:pr-16 text-avo-pink-pink">
                         Frontend <br/>solutions
                     </h2>
                     {FeatureListFrontend.map((props, idx) => (
                         <Feature key={idx} {...props} />
                     ))}
-                    <Button text={'Read more'} link={'#fontend-solutions'}/>
 
+                    <div className="flex flex-col sm:flex-row gap-16">
+                        <p className='text-lg'>You would like to know in detail <br/> how we help you achieve your goals?</p>
+                        <Button text={'Read more'} link={'#fontend-solutions'}/>
+                    </div>
                 </Reveal>
             </article>
         </>

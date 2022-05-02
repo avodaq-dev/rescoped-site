@@ -10,7 +10,7 @@ export default function BlogComp({children, sidebar, toc}) {
     const hasSidebar = sidebar && sidebar.items.length > 0;
 
     return (
-        <div className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-72 max-w-[105rem] mx-auto', darkThemeBG)}>
+        <div className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-72 mx-auto', darkThemeBG)}>
             <div className="flex gap-16">
                 {hasSidebar && (
                     <aside className="hidden md:block w-full max-w-[12rem]">

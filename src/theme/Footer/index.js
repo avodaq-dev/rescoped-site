@@ -15,7 +15,7 @@ import clsx from "clsx";
 function Footer() {
     const {footer} = useThemeConfig();
     const {colorMode} = useColorMode();
-    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.15]' : 'bg-avo-blue-dark';
+    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
 
     if (!footer) {
         return null;
@@ -25,18 +25,25 @@ function Footer() {
 
     return (
         <>
-            <footer className={clsx('px-4 sm:px-16 w-full max-w-[105rem] mx-auto py-16', darkThemeBG)}
+            <footer className={clsx('px-4 sm:px-16 mx-auto py-16', darkThemeBG)}
                     id="section-contact">
                 <div className="flex flex-col gap-16">
-                    <h2 className="text-2xl font-bold text-avo-pink-pink">
+                    <h2 className="text-3xl sm:text-6xl !leading-tight font-medium sm:font-light pr-8 sm:pr-16 text-avo-pink-pink">
                         Contact
                     </h2>
                     <FooterLinks links={links}/>
                 </div>
             </footer>
-            <p className={clsx('flex p-4 w-full justify-center items-center max-w-[105rem] mx-auto bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green')}>
-                <span className="text-white font-medium">© {new Date().getFullYear()} rescoped Wiki • Built with Docusaurus by <a className="underline-thin" href="">avodaq AG</a></span>
-            </p>
+            <div
+                className={clsx('flex py-8 px-4 sm:px-16', darkThemeBG)}>
+                <p className="flex flex-col md:flex-row gap-4 sm:justify-between w-full font-medium text-sm">
+                    <div className="flex gap-4">
+                        <a className="underline-thin" href="">Privacy Policy</a>
+                        <a className="underline-thin" href="">Legal Information</a>
+                    </div>
+                    <span>© {new Date().getFullYear()} rescoped by <a className="underline-thin" href="">avodaq AG</a> • Built with Docusaurus</span>
+                </p>
+            </div>
         </>
     )
 

@@ -10,6 +10,7 @@ article[itemprop="blogPost"] {
   }
   margin-bottom: 1rem !important;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+
   header {
     position: relative;
   }
@@ -21,11 +22,10 @@ article[itemprop="blogPost"] {
 
 
 article[itemprop="blogPost"] {
-
-
   header {
     h1, h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
       @media (min-width: 996px) {
         padding-right: 14rem;
       }
@@ -33,17 +33,33 @@ article[itemprop="blogPost"] {
 
     [class*="blogPostData"] {
       color: p.$avo-green;
-      margin: 0.25rem !important;
-      font-weight: 600;
+      margin-block: 0.25rem !important;
+      font-weight: 700;
       time {
-        color: var(--ifm-font-color-base);
+        color: var(--opacity-36);
+        font-weight: 500;
+
       }
     }
 
     .avatar {
-      .avatar__intro {
-        font-weight: 600;
+      .avatar__photo-link {
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+        &:hover {
+          opacity: 1;
+        }
       }
+
+      .avatar__intro, .avatar__name {
+        color: var(--opacity-36);
+        font-weight: 500;
+        small {
+          font-size: 100%;
+
+        }
+      }
+
       @media (min-width: 996px) {
         position: absolute;
         top: 0;
@@ -62,24 +78,46 @@ article[itemprop="blogPost"] {
   // footer
 
   footer {
-    .col > b {
-      display: none;
+    gap: 1.5rem;
+    justify-content: space-between;
+
+    .col {
+      width: auto;
+
+      > b {
+        display: none;
+      }
+
+      [class*="tag"] {
+        transition: all 0.2s ease;
+      }
+      [class*="tag"]:not(:hover) {
+        color: var(--opacity-36);
+        --docusaurus-tag-list-border: var(--opacity-6);
+      }
     }
 
     ul.margin-left--sm {
       margin-left: 0 !important;
     }
 
-    .text--right a {
-      padding: 0.4rem 0.6rem;
-      border-radius: 4px;
-      color: p.$avo-green;
-      transition: background-color 0.2s ease;
-      &:hover {
-        background: rgba(p.$avo-green, 0.16);
-      }
+    .col[class*='col--'] {
+      flex: none;
+      max-width: inherit;
     }
 
+    .text--right {
+      a {
+        padding: 0.4rem 0.6rem;
+        border-radius: 4px;
+        color: p.$avo-green;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background: rgba(p.$avo-green, 0.16);
+        }
+      }
+    }
   }
 
 

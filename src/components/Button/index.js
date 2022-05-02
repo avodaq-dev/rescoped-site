@@ -5,7 +5,7 @@ export default function Button({text, link}) {
     return (
         <button className="flex">
             <Link
-                className="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden transition bg-avo-pink-pink rounded-full shadow-md shadow-avo-pink-pink/20 group"
+                className="relative inline-flex items-center justify-center px-6 py-3 sm:px-10 sm:py-4 overflow-hidden transition bg-avo-pink-pink rounded-full shadow-md shadow-avo-pink-pink/20 group"
                 to={link}>
                 <span
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-200 -translate-x-full bg-avo-pink-pink group-hover:translate-x-0 ease">
@@ -16,7 +16,7 @@ export default function Button({text, link}) {
                     </svg>
                 </span>
                 <span
-                    className="absolute flex items-center justify-center w-full h-full text-white font-medium text-lg transition duration-200 group-hover:opacity-0 ease">
+                    className="absolute flex items-center justify-center w-full h-full text-white font-medium sm:text-lg transition duration-200 group-hover:opacity-0 ease">
                     {text}
                 </span>
                 <span className="relative invisible">{text}</span>
