@@ -21,11 +21,13 @@ export default function Home() {
     console.info("dev by: %c Arthur Ersosi ", consoleLogStyle);
 
     return (
-        <Layout
-            title={`${siteConfig.title}`}
-            description="Advanced tooling for cutting edge engineers">
-            <HomepageHeader/>
-            <Main/>
-        </Layout>
+        <div className="w-full max-w-[105rem] mx-auto">
+            <Layout
+                title={`${siteConfig.title}`}
+                description="Advanced tooling for cutting edge engineers">
+                <HomepageHeader/>
+                <Main/>
+            </Layout>
+        </div>
     );
 }

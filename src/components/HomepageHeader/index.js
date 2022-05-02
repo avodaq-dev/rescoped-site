@@ -21,7 +21,7 @@ export default function HomepageHeader() {
     return (
         <>
             <header id="section-header"
-                className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24 max-w-[105rem] mx-auto', darkThemeBG)}>
+                className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24', darkThemeBG)}>
                 <Fade {...fadeProps} delay={750}>
                     <PixiComp/>
                 </Fade>
