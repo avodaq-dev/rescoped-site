@@ -33,7 +33,7 @@ export default function HomepageHeader() {
                             </p>
                         </div>
 
-                        <h2 className="text-3xl sm:text-5xl  md:text-7xl !leading-tight font-normal md:font-light pr-8 sm:pr-16">
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl !leading-tight font-normal md:font-light pr-8 sm:pr-16">
                             Advanced tooling for <br className='hidden md:block'/> cutting edge engineers.
                         </h2>
                         <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>

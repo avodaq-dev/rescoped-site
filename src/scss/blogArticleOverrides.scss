@@ -34,15 +34,15 @@ article[itemprop="blogPost"] {
     [class*="blogPostData"] {
       color: p.$avo-green;
       margin-block: 0.25rem !important;
-      font-weight: 600;
-
+      font-weight: 700;
       time {
         color: var(--opacity-36);
+        font-weight: 500;
+
       }
     }
 
     .avatar {
-      transform: scale(0.9);
       .avatar__photo-link {
         opacity: 0.5;
         transition: opacity 0.2s ease;
@@ -52,10 +52,11 @@ article[itemprop="blogPost"] {
       }
 
       .avatar__intro, .avatar__name {
-        font-weight: 600;
         color: var(--opacity-36);
+        font-weight: 500;
         small {
           font-size: 100%;
+
         }
       }
 
@@ -87,6 +88,9 @@ article[itemprop="blogPost"] {
         display: none;
       }
 
+      [class*="tag"] {
+        transition: all 0.2s ease;
+      }
       [class*="tag"]:not(:hover) {
         color: var(--opacity-36);
         --docusaurus-tag-list-border: var(--opacity-6);

@@ -34,9 +34,17 @@ function Footer() {
                     <FooterLinks links={links}/>
                 </div>
             </footer>
-            <p className={clsx('flex p-4 w-full justify-center items-center max-w-[105rem] mx-auto bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green')}>
-                <span className="text-white font-medium">© {new Date().getFullYear()} rescoped Wiki • Built with Docusaurus by <a className="underline-thin" href="">avodaq AG</a></span>
-            </p>
+            <div
+                className={clsx('flex p-4 w-full max-w-[105rem] mx-auto bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green')}>
+                <p className="flex flex-col md:flex-row gap-4 justify-between items-center w-full text-white font-medium">
+                    <div className="flex gap-4">
+                        <a className="underline-thin" href="">Privacy Policy</a>
+                        <a className="underline-thin" href="">Legal Information</a>
+                    </div>
+                    <span>© {new Date().getFullYear()} rescoped by <a className="underline-thin" href="">avodaq AG</a> • Built with Docusaurus</span>
+                </p>
+
+            </div>
         </>
     )
 

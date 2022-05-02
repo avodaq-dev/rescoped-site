@@ -7,8 +7,8 @@ import Button from '@site/src/components/Button';
 function Feature({Svg, title, description}) {
     return (
         <>
-            <h3 className="font-medium text-3xl mb-8">{title}</h3>
-            <p className='text-xl'>{description}</p>
+            <h3 className="font-bold text-xl mb-8">{title}</h3>
+            <p className='text-lg max-w-[74ch]'>{description}</p>
         </>
     );
 }
@@ -18,16 +18,15 @@ export default function SectionBackend() {
         <>
             <article className='grid grid-cols-3 gap-16 article-grid'>
                 <Reveal keyframes={customKeyframes} {...fadeUpProps} className={`col-span-3 ease-out`}>
-                    <h2 className="text-xl font-medium text-avo-pink-pink">
+                    <h2 className="text-3xl sm:text-6xl !leading-tight font-medium sm:font-light pr-8 sm:pr-16 text-avo-pink-pink">
                         Backend <br/>solutions
                     </h2>
                     {FeatureListBackend.map((props, idx) => (
                         <Feature key={idx} {...props} />
                     ))}
-                    {/*<Button text={'Read more'} link={'#backend-solutions'}/>*/}
 
-                    <div className="flex gap-16">
-                        <p className='text-xl'>Learn more about our backend solutions <br/> and get the exclusive details.</p>
+                    <div className="flex flex-col sm:flex-row gap-16">
+                        <p className='text-lg'>Learn more about our backend solutions <br/> and get the exclusive details.</p>
                         <Button text={'Read more'} link={'#backend-solutions'}/>
                     </div>
 
