@@ -35,8 +35,8 @@ function Footer() {
                 </div>
             </footer>
             <div
-                className={clsx('flex p-4 w-full max-w-[105rem] mx-auto bg-gradient-to-r from-avo-pink-pink via-purple-500 to-avo-green-green')}>
-                <p className="flex flex-col md:flex-row gap-4 justify-between items-center w-full text-white font-medium text-sm">
+                className={clsx('flex py-6 px-4 sm:px-16 w-full max-w-[105rem] mx-auto', darkThemeBG)}>
+                <p className="flex flex-col md:flex-row gap-4 sm:justify-between w-full font-medium text-sm">
                     <div className="flex gap-4">
                         <a className="underline-thin" href="">Privacy Policy</a>
                         <a className="underline-thin" href="">Legal Information</a>
