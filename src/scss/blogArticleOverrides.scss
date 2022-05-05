@@ -43,20 +43,10 @@ article[itemprop="blogPost"] {
     }
 
     .avatar {
-      .avatar__photo-link {
-        opacity: 0.5;
-        transition: opacity 0.2s ease;
-        &:hover {
-          opacity: 1;
-        }
-      }
-
       .avatar__intro, .avatar__name {
-        color: var(--opacity-36);
         font-weight: 500;
         small {
-          font-size: 100%;
-
+          font-size: 14.4px;
         }
       }
 

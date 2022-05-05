@@ -1,8 +1,8 @@
 const React = require("react");
 export const FeatureListFrontend = [
     {
-        title: 'Robust & Performant',
-        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+        title: "Robust & Performant",
+        Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
         description: (
             <>
                 Our solutions are developed with performance in mind, strictly typed and thoroughly tested to ensure it
@@ -11,8 +11,8 @@ export const FeatureListFrontend = [
         ),
     },
     {
-        title: 'Scalable',
-        Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+        title: "Scalable",
+        Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
         description: (
             <>
                 We provide centralized management and control that makes it easy to keep track of changes, dependencies,
@@ -22,8 +22,8 @@ export const FeatureListFrontend = [
         ),
     },
     {
-        title: 'Flexible',
-        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+        title: "Flexible",
+        Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
         description: (
             <>
                 Because our tools are designed to be data-agnostic, they can be used in any environment, easily switched

@@ -1,28 +1,28 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const path = require("path");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'rescoped',
-    tagline: 'Advanced tooling for cutting edge engineers',
-    url: 'https://avodaq-dev.github.io',
-    baseUrl: '/rescoped-site/',
-    onBrokenLinks: 'warn',
-    onBrokenMarkdownLinks: 'warn',
-    favicon: 'img/fav_re.svg',
+    title: "rescoped",
+    tagline: "Advanced tooling for cutting edge engineers",
+    url: "https://avodaq-dev.github.io",
+    baseUrl: "/rescoped-site/",
+    onBrokenLinks: "warn",
+    onBrokenMarkdownLinks: "warn",
+    favicon: "img/fav_re.svg",
     trailingSlash: true, //for GitHub
-    organizationName: 'avodaq-dev', // Usually your GitHub org/user name.
-    projectName: 'rescoped-site', // Usually your repo name.
-    deploymentBranch: 'gh-pages',
+    organizationName: "avodaq-dev", // Usually your GitHub org/user name.
+    projectName: "rescoped-site", // Usually your repo name.
+    deploymentBranch: "gh-pages",
     noIndex: true, // Prevent indexing by searchengines
 
     presets: [
         [
-            'classic',
+            "classic",
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 // debug: true,
@@ -33,16 +33,16 @@ const config = {
                 },
                 theme: {
                     customCss: [
-                        require.resolve('./src/scss/tailwind.css'),
-                        require.resolve('./src/scss/styles.scss')],
+                        require.resolve("./src/scss/tailwind.css"),
+                        require.resolve("./src/scss/styles.scss")],
                 },
             }),
         ],
     ],
 
     plugins: [
-        path.resolve(__dirname, 'plugin-tailwind-docusaurus'),
-        'docusaurus-plugin-sass',
+        path.resolve(__dirname, "plugin-tailwind-docusaurus"),
+        "docusaurus-plugin-sass",
     ],
 
 
@@ -50,77 +50,77 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             colorMode: {
-                defaultMode: 'dark',
+                defaultMode: "dark",
                 respectPrefersColorScheme: true,
             },
             navbar: {
                 hideOnScroll: true,
                 logo: {
-                    alt: 'rescoped logo',
-                    src: 'img/re_logo.svg',
-                    srcDark: 'img/re_logo_dark.svg',
+                    alt: "rescoped logo",
+                    src: "img/re_logo.svg",
+                    srcDark: "img/re_logo_dark.svg",
                     width: 48,
-                    href: '/'
+                    href: "/"
                 },
                 items: [
                     {
-                        label: 'learn',
-                        position: 'right',
+                        label: "learn",
+                        position: "right",
                         items: [
                             {
-                                href: 'https://avodaq-dev.github.io/hyper-docs/',
-                                label: 'hyperscope',
+                                href: "https://avodaq-dev.github.io/hyper-docs/",
+                                label: "hyperscope",
                                 rel: null,
 
                             },
                             {
-                                href: 'https://avodaq-dev.github.io/hyper-docs/docs/intro/',
-                                label: 'Docs',
+                                href: "https://avodaq-dev.github.io/hyper-docs/docs/intro/",
+                                label: "Docs",
                                 rel: null,
 
                             },
                             {
-                                href: 'https://avodaq-dev.github.io/hyper-docs/blog/',
-                                label: 'Changelog',
+                                href: "https://avodaq-dev.github.io/hyper-docs/blog/",
+                                label: "Changelog",
                                 rel: null,
                             },
 
                         ],
                     },
-                    {to: 'blog', label: 'about', position: 'right'},
-                    {to: '#section-contact', label: 'contact', position: 'right'},
+                    {to: "blog", label: "about", position: "right"},
+                    {to: "#section-contact", label: "contact", position: "right"},
                 ],
             },
             footer: {
-                style: 'light',
+                style: "light",
                 links: [
                     {
-                        title: 'Community',
+                        title: "Community",
                         items: [
                             {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                                label: "Stack Overflow",
+                                href: "https://stackoverflow.com/questions/tagged/docusaurus",
                             },
                             {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
+                                label: "Discord",
+                                href: "https://discordapp.com/invite/docusaurus",
                             },
                             {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
+                                label: "Twitter",
+                                href: "https://twitter.com/docusaurus",
                             },
                         ],
                     },
                     {
-                        title: 'More',
+                        title: "More",
                         items: [
                             {
-                                label: 'News',
-                                to: '/blog',
+                                label: "News",
+                                to: "/blog",
                             },
                             {
-                                label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
+                                label: "GitHub",
+                                href: "https://github.com/facebook/docusaurus",
                             },
                         ],
                     },
