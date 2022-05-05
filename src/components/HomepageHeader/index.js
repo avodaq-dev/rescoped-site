@@ -11,7 +11,6 @@ import Button from "@site/src/components/Button";
 import Dots2 from "@site/static/img/DOTS_02.svg";
 import ReLogoColor from "@avo/monorepo/doku_libs/static/img/rescoped_logo_color.svg";
 import ReLogoWhite from "@avo/monorepo/doku_libs/static/img/rescoped_logo_white.svg";
-import PixiBrowserOnly from "../PixiBrowserOnly";
 
 export default function HomepageHeader() {
     const {colorMode} = useColorMode();
@@ -25,7 +24,6 @@ export default function HomepageHeader() {
                 className={clsx("relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24", darkThemeBG)}>
                 <Fade {...fadeProps} delay={750}>
                     <PixiComp/>
-                    {/*<PixiBrowserOnly/>*/}
                 </Fade>
                 <div className='flex flex-col gap-12 gap-8 sm:gap-12 relative'>
                     <Reveal keyframes={customKeyframes} {...fadeUpProps}>
