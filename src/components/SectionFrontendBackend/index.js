@@ -1,6 +1,6 @@
 import React from "react";
-import SectionFrontend from '@site/src/components/SectionFrontend';
-import SectionBacked from '@site/src/components/SectionBacked';
+import SectionFrontend from "@site/src/components/SectionFrontend";
+import SectionBacked from "@site/src/components/SectionBacked";
 
 export default function SectionFrontendBackend() {
     return (

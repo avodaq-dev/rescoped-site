@@ -6,24 +6,26 @@ import styles from "./index.module.scss";
 import {Reveal, Fade} from "react-awesome-reveal";
 import {fadeUpProps, fadeProps, customKeyframes} from "@avo/monorepo/doku_libs/props/fadeAnimation";
 
-import PixiComp from '@site/src/components/PixiComp';
-import Button from '@site/src/components/Button';
-import Dots2 from '@site/static/img/DOTS_02.svg';
+import PixiComp from "@site/src/components/PixiComp";
+import Button from "@site/src/components/Button";
+import Dots2 from "@site/static/img/DOTS_02.svg";
 import ReLogoColor from "@avo/monorepo/doku_libs/static/img/rescoped_logo_color.svg";
 import ReLogoWhite from "@avo/monorepo/doku_libs/static/img/rescoped_logo_white.svg";
+import PixiBrowserOnly from "../PixiBrowserOnly";
 
 export default function HomepageHeader() {
     const {colorMode} = useColorMode();
-    const darkThemehide = colorMode === 'light' ? '' : 'hidden';
-    const lightThemehide = colorMode === 'light' ? 'hidden' : '';
-    const darkThemeBG = colorMode === 'light' ? 'bg-amber-500/[.08]' : 'bg-black/[.08]';
+    const darkThemehide = colorMode === "light" ? "" : "hidden";
+    const lightThemehide = colorMode === "light" ? "hidden" : "";
+    const darkThemeBG = colorMode === "light" ? "bg-amber-500/[.04]" : "bg-black/[.08]";
 
     return (
         <>
             <header id="section-header"
-                className={clsx('relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24', darkThemeBG)}>
+                className={clsx("relative px-4 sm:px-16 pt-8 md:pt-24 pb-8 md:pb-24", darkThemeBG)}>
                 <Fade {...fadeProps} delay={750}>
                     <PixiComp/>
+                    {/*<PixiBrowserOnly/>*/}
                 </Fade>
                 <div className='flex flex-col gap-12 gap-8 sm:gap-12 relative'>
                     <Reveal keyframes={customKeyframes} {...fadeUpProps}>
@@ -37,8 +39,8 @@ export default function HomepageHeader() {
                             Advanced tooling for <br className='hidden md:block'/> cutting edge engineers.
                         </h2>
                         <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>
-                            <Button text={'Solutions'} link={'#section-front-back'}/>
-                            <Button text={'About rescoped'} link={'#section-about'}/>
+                            <Button text={"Solutions"} link={"#section-front-back"}/>
+                            <Button text={"About rescoped"} link={"#section-about"}/>
                         </div>
                     </Reveal>
 
@@ -47,10 +49,10 @@ export default function HomepageHeader() {
                             <Dots2
                                 className="hidden sm:block h-[4rem] md:h-[5.75rem] w-auto absolute bottom-[0.35rem] right-0 md:left-0 rotate-[270deg] md:rotate-0"/>
                             <h1 className="w-[10rem] sm:w-[16rem] md:w-[24rem] md:absolute md:bottom-0 md:right-0">
-                                <ReLogoColor title="rescoped Logo" className={clsx('relogo mt-auto', darkThemehide)}/>
-                                <ReLogoWhite title="rescoped Logo" className={clsx('relogo mt-auto', lightThemehide)}/>
+                                <ReLogoColor title="rescoped Logo" className={clsx("relogo mt-auto", darkThemehide)}/>
+                                <ReLogoWhite title="rescoped Logo" className={clsx("relogo mt-auto", lightThemehide)}/>
                             </h1>
-                            <p className={clsx('font-bold text-xl absolute bottom-5 sm:top-0 right-0 sm:-mr-3', styles.md_verticalLR)}>
+                            <p className={clsx("font-bold text-xl absolute bottom-5 sm:top-0 right-0 sm:-mr-3", styles.md_verticalLR)}>
                                 Give us a star on <a href="">GitHub</a>!
                             </p>
                         </Fade>

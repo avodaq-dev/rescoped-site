@@ -1,9 +1,9 @@
-import React from 'react';
-import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from "react";
+import Layout from "@theme/Layout";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import HomepageHeader from '@site/src/components/HomepageHeader';
-import Main from '@site/src/components/Main';
+import HomepageHeader from "@site/src/components/HomepageHeader";
+import Main from "@site/src/components/Main";
 
 export default function Home() {
     const {siteConfig} = useDocusaurusContext();
