@@ -53,9 +53,11 @@ export default function PixiComp() {
                 backgroundColor: 0x32dcab,
             });
 
+            let renderTexture = PIXI.RenderTexture.create({width: app.screen.width, height: app.screen.height});
+
             for (let i = 0; i < 3; i++) {
                 rt.push(
-                    PIXI.RenderTexture.create({width: app.screen.width, height: app.screen.height}),
+                    renderTexture
                 );
                 rts.push(rt);
             }
@@ -87,7 +89,7 @@ export default function PixiComp() {
                 tempBg.width = app.screen.width * 1.2;
                 tempBg.height = app.screen.height * 1.5;
 
-                app.renderer.render(tempBg, rt[0]);
+                app.renderer.render(tempBg, {renderTexture});
 
                 for (let i = 0, len = containers.length; i < len; i++) {
                     app.stage.addChild(containers[i]);
