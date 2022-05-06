@@ -1,19 +1,11 @@
-import React, {useRef, useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
-
-import Displace from "@site/static/img/DP_03.jpg";
-import BGimg1 from "@site/static/img/BGimg_01.jpg";
-import BGimg2 from "@site/static/img/BGimg_02.jpg";
-import BGimg3 from "@site/static/img/BGimg_03.jpg";
-import BGimg4 from "@site/static/img/BGimg_04.jpg";
-import BGimg5 from "@site/static/img/BGimg_05.jpg";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
+import Displace from "@site/static/img/DP_03.jpg";
+import {rando} from "../../utils/randomIMG"
 
 export default function PixiComp() {
-
-    const imgArr = [BGimg1, BGimg2, BGimg3, BGimg4, BGimg5];
-    const IMGswap = imgArr[Math.floor(Math.random() * imgArr.length)]
     const ref = useRef(null);
 
     useEffect(() => {
@@ -180,7 +172,6 @@ export default function PixiComp() {
 
             // Add app to DOM
             ref.current.appendChild(app.view);
-            // Start the PixiJS app
             app.start();
 
             return () => {
@@ -189,11 +180,20 @@ export default function PixiComp() {
         }
     }, [ref]);
 
-    return (
-        <div ref={ref}
-            className={clsx("pixiRef", styles.pixiRef)}
-            data-img={IMGswap}
-            data-displace={Displace}
-        />
-    );
+    if (window.innerWidth >= 600) {
+        return (
+            <div ref={ref}
+                 className={clsx("pixiRef", styles.pixiRef)}
+                 data-img={rando}
+                 data-displace={Displace}
+            />
+        );
+    } else {
+        return (
+            <img ref={ref} className="IMGRef absolute inset-0 w-full h-full object-cover bg-avo-green-green opacity-75"
+                 src={rando} alt=""/>
+        )
+    }
+
+
 };
