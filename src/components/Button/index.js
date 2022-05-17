@@ -1,19 +1,16 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import clsx from "clsx";
+import ArrowMD from "@site/static/img/arrow_md.svg";
 
-export default function Button({text, link}) {
+export default function Button({text, link, colorOverride = "shadow-avo-pink-pink/20 bg-avo-pink-pink"}) {
     return (
         <button className="flex">
-            <Link
-                className="relative inline-flex items-center justify-center px-6 py-3 sm:px-10 sm:py-4 overflow-hidden transition bg-avo-pink-pink rounded-full shadow-md shadow-avo-pink-pink/20 group"
-                to={link}>
+            <Link to={link}
+                className={clsx("relative inline-flex items-center justify-center px-6 py-3 sm:px-10 sm:py-4 overflow-hidden transition  rounded-full group shadow-md", colorOverride)}>
                 <span
-                    className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-200 -translate-x-full bg-avo-pink-pink group-hover:translate-x-0 ease">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
+                    className={clsx("absolute inset-0 flex items-center justify-center w-full h-full text-white duration-200 -translate-x-full group-hover:translate-x-0 ease", colorOverride)}>
+                    <ArrowMD className="h-6 w-auto"/>
                 </span>
                 <span
                     className="absolute flex items-center justify-center w-full h-full text-white font-medium sm:text-lg transition duration-200 group-hover:opacity-0 ease">
@@ -22,7 +19,5 @@ export default function Button({text, link}) {
                 <span className="relative invisible">{text}</span>
             </Link>
         </button>
-
-
     )
 }

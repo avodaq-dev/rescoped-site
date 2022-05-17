@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width=".75">
+    <path style="fill:none;opacity:.2" d="M0 0h24v24H0z"/>
+    <circle cx="12" cy="12" r="10" style="fill:rgba(50, 220, 171, 0.35)"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+          d="M12 1v22M1 12c9 0 11 5.1 11 11M9 4l3-3 3 3" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+          d="m4 15-3-3 3-3M23 12c-9 0-11 5.1-11 11" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round" d="m20 15 3-3-3-3" class="strokeColorSwitch"/>
+</svg>
