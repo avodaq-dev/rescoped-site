@@ -194,6 +194,4 @@ export default function PixiComp() {
                  src={rando} alt=""/>
         )
     }
-
-
 };
