@@ -43,18 +43,11 @@ export default function SectionProducts() {
                             onChange={(e) => setQ(e.target.value)}/>
                     </div>
 
-                    <ul className=" grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] lg:sm:grid-cols-4 gap-[clamp(1rem,calc(1rem+1vw),2rem)]">
+                    <ul className=" grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] lg:grid-cols-4 gap-[clamp(1rem,calc(1rem+1vw),2rem)]">
                         {search(productsData).map(
                             (productData, index) => (<Product productData={productData} key={index}/>)
                         )}
                     </ul>
-
-
-                    {/*<ul className={clsx("-mt-10", styles.sideScroller)}>*/}
-                    {/*    {search(productsData).map(*/}
-                    {/*        (productData, index) => (<Product productData={productData} key={index} width={"w-[clamp(10rem,calc(15rem+8vw),30rem)]"}/>)*/}
-                    {/*    )}*/}
-                    {/*</ul>*/}
                 </Reveal>
             </article>
         </>
