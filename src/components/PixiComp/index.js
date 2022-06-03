@@ -4,6 +4,32 @@ import styles from "./styles.module.scss";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import Displace from "@site/static/img/DP_03.jpg";
 import {rando} from "../../utils/randomIMG"
+import gsap from "gsap";
+
+
+// const MyFunction = () => {
+//     const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
+//
+//     const updateMedia = () => {
+//         setDesktop(window.innerWidth > 1450);
+//     };
+//
+//     useEffect(() => {
+//         window.addEventListener("resize", updateMedia);
+//         return () => window.removeEventListener("resize", updateMedia);
+//     });
+//
+//     return (
+//         <div>
+//             {isDesktop ? (
+//                 <div>I show on 1451px or higher</div>
+//             ) : (
+//                 <div>I show on 1450px or lower</div>
+//             )}
+//         </div>
+//     );
+// }
+
 
 export default function PixiComp() {
     const ref = useRef(null);
@@ -116,19 +142,13 @@ export default function PixiComp() {
 
                 const mouseMove = () => {
                     app.stage.on("pointermove", (ev) => {
-                        let x = ev.data.global.x;
-                        let y = ev.data.global.y;
                         for (let i = 0, len = containers.length; i < len; i++) {
-
                             gsap.gsap.to(displacementFilters[i].scale, {
                                 duration: 1,
-                                // x: Math.atan(x - brushes[i].x) * 55,
-                                // y: Math.atan(y - brushes[i].y) * 55,
                                 x: 80,
                                 y: 80,
                                 ease: "power2.easeInOut",
                             });
-
                             gsap.gsap.to(brushes[i].position, {
                                 duration: 1.5,
                                 x: ev.data.global.x,
@@ -138,10 +158,10 @@ export default function PixiComp() {
                         }
                     });
                 }
-                const mouseStop = () => {
+                const mouseLeave = () => {
+                    app.stage.off("pointermove", null);
                     let centerX = (headerElm.offsetLeft + headerElm.offsetWidth / 2);
                     let centerY = (headerElm.offsetTop + headerElm.offsetHeight / 2);
-
                     for (let i = 0, len = containers.length; i < len; i++) {
                         gsap.gsap.to(brushes[i].position, {
                             duration: 2,
@@ -158,13 +178,8 @@ export default function PixiComp() {
                     }
                 }
                 const headerElm = document.getElementById("section-header");
-                headerElm.addEventListener("mouseenter", () => {
-                    mouseMove();
-                });
-                headerElm.addEventListener("mouseleave", () => {
-                    app.stage.off("pointermove", null);
-                    mouseStop();
-                });
+                headerElm.addEventListener("mouseenter", mouseMove);
+                headerElm.addEventListener("mouseleave", mouseLeave);
                 mouseMove();
 
             })
@@ -180,18 +195,12 @@ export default function PixiComp() {
         }
     }, [ref]);
 
-    if (window.innerWidth >= 600) {
-        return (
-            <div ref={ref}
-                 className={clsx("pixiRef", styles.pixiRef)}
-                 data-img={rando}
-                 data-displace={Displace}
-            />
-        );
-    } else {
-        return (
-            <img ref={ref} className="IMGRef absolute inset-0 w-full h-full object-cover bg-avo-green-green opacity-75"
-                 src={rando} alt=""/>
-        )
-    }
+    return (
+        <div ref={ref}
+             className={clsx("pixiRef", styles.pixiRef)}
+             data-img={rando}
+             data-displace={Displace}
+        />
+    );
+
 };
