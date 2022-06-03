@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width=".75">
+    <path style="fill:none;opacity:.2" d="M0 0h24v24H0z"/>
+    <path d="M21.2 2.2H6.8a.6.6 0 0 0-.6.6V13H11v4.8h10.2a.6.6 0 0 0 .6-.6V2.8a.6.6 0 0 0-.6-.6Z" style="fill:rgba(50, 220, 171, 0.35)"/>
+    <rect x="2.3" y="14.3" width="7.5" height="7.5" rx=".5" style="fill:rgba(50, 220, 171, 0.35)"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round" d="M13 19h1.5" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3,2" d="M16.5 19h4" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round" d="M21.5 19H23v-1.5" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.6470587253570557,1.7647058963775635"
+          d="M23 15.7V3.4" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round" d="M23 2.5V1h-1.5" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.6470587253570557,1.7647058963775635"
+          d="M19.7 1H7.4" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round" d="M6.5 1H5v1.5" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3,2" d="M5 4.5v4" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round" d="M5 9.5V11" class="strokeColorSwitch"/>
+    <circle cx="6" cy="18" r="1.5" style="fill:none;stroke-linecap:round;stroke-miterlimit:10" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-miterlimit:10" d="m16 8-8.5 8.5" class="strokeColorSwitch"/>
+    <path style="fill:none;stroke-linecap:round;stroke-linejoin:round" d="M12 8h4v4M8 13H1v10h10v-7" class="strokeColorSwitch"/>
+</svg>
