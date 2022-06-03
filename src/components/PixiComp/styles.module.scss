@@ -1,7 +1,12 @@
 .pixiRef {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   overflow-x: hidden;
+  @media (min-width: 600px) {
+    inset: 0;
+  }
   @media (min-width: 997px) {
     top: 4rem;
     right: 0;

@@ -177,6 +177,8 @@ export default function PixiComp() {
                         });
                     }
                 }
+
+
                 const headerElm = document.getElementById("section-header");
                 headerElm.addEventListener("mouseenter", mouseMove);
                 headerElm.addEventListener("mouseleave", mouseLeave);
