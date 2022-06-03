@@ -3,7 +3,7 @@ export const DataProducts = [
     {
         title: "Product 1",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
-        src: "https://picsum.photos/500/500?27",
+        src: "https://picsum.photos/800/450?27",
         link: "test",
         description: (
             <>
@@ -16,7 +16,7 @@ export const DataProducts = [
     {
         title: "Product 2",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
-        src: "https://picsum.photos/500/500?28",
+        src: "https://picsum.photos/800/450?28",
         link: "test",
         description: (
             <>
@@ -29,7 +29,7 @@ export const DataProducts = [
     {
         title: "Product 3",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
-        src: "https://picsum.photos/500/500?29",
+        src: "https://picsum.photos/800/450?29",
         link: "test",
         description: (
             <>
@@ -37,12 +37,12 @@ export const DataProducts = [
                 dolorem iusto, minus mollitia nemo perferendis perspiciatis quisquam tenetur?
             </>
         ),
-        tags: ["react", "javascript", "node", "fullstack", "front-end", "back-end", "web", "mvc"]
+        tags: ["react", "fullstack", "front-end", "back-end", "web", "mvc"]
     },
     {
         title: "Product 4",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
-        src: "https://picsum.photos/500/500?26",
+        src: "https://picsum.photos/800/450?26",
         link: "test",
         description: (
             <>
@@ -55,7 +55,7 @@ export const DataProducts = [
     {
         title: "Product 5",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
-        src: "https://picsum.photos/500/500?25",
+        src: "https://picsum.photos/800/450?25",
         link: "test",
         description: (
             <>
@@ -63,7 +63,7 @@ export const DataProducts = [
                 dolorem iusto, minus mollitia nemo perferendis perspiciatis quisquam tenetur?
             </>
         ),
-        tags: ["react", "javascript", "ruby", "front-end", "back-end", "fullstack", "ruby-on-rails", "mvc"]
+        tags: ["react", "javascript", "ruby", "front-end", "ruby-on-rails", "mvc"]
     },
 
 ];

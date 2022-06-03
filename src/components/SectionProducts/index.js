@@ -35,27 +35,26 @@ export default function SectionProducts() {
                 <Reveal keyframes={customKeyframes} {...fadeUpProps} className={"col-span-3 ease-out"}>
                     <h2 className="text-3xl sm:text-6xl !leading-tight font-medium sm:font-light pr-8 sm:pr-16">
                         Our <br/>
-                        Products
+                        Tools
                     </h2>
-                    <p className='text-lg'>Learn more about our products <br/> and get the exclusive details.</p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-between sm:items-end">
-                        <input
-                            className="p-2 w-72 font-bold"
-                            type="text"
-                            placeholder="Filter Tags"
-                            value={q}
-                            onChange={(e) => setQ(e.target.value)}
-                        />
-                        <div className="font-bold text-lg flex gap-4 items-center">
-                            <p>Scroll </p>
-                            <ArrowLG className="w-12 h-auto"/>
-                        </div>
+                        <p className='text-lg'>Learn more about our tools <br/> and get the exclusive details.</p>
+                        <input className="p-2 font-bold w-[16rem]" type="text" placeholder="Filter by #Tag" value={q}
+                            onChange={(e) => setQ(e.target.value)}/>
                     </div>
-                    <ul className={clsx("grid grid-flow-col justify-start gap-2 sm:gap-4 lg:gap-6 overflow-auto -mt-10", styles.scroller)}>
+
+                    <ul className=" grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] lg:sm:grid-cols-4 gap-[clamp(1rem,calc(1rem+1vw),2rem)]">
                         {search(productsData).map(
-                            (val, index) => (<Product val={val} key={index}/>)
+                            (productData, index) => (<Product productData={productData} key={index}/>)
                         )}
                     </ul>
+
+
+                    {/*<ul className={clsx("-mt-10", styles.sideScroller)}>*/}
+                    {/*    {search(productsData).map(*/}
+                    {/*        (productData, index) => (<Product productData={productData} key={index} width={"w-[clamp(10rem,calc(15rem+8vw),30rem)]"}/>)*/}
+                    {/*    )}*/}
+                    {/*</ul>*/}
                 </Reveal>
             </article>
         </>
