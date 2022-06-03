@@ -26,8 +26,11 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 // debug: true,
-
-                docs: false,
+                docs: {
+                    sidebarPath: require.resolve("./src/Sidebars/sidebars.js"),
+                    // Please change this to your repo.
+                    editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                },
                 blog: {
                     showReadingTime: true,
                 },
@@ -43,6 +46,13 @@ const config = {
     plugins: [
         path.resolve(__dirname, "plugin-tailwind-docusaurus"),
         "docusaurus-plugin-sass",
+        ["docusaurus-plugin-typedoc",
+            {
+                entryPoints: ["node_modules/@avo/monorepo/index.ts"],
+                tsconfig: "node_modules/@avo/monorepo/tsconfig.json",
+                watch: process.env.TYPEDOC_WATCH,
+            }
+        ]
     ],
 
 
@@ -64,30 +74,12 @@ const config = {
                 },
                 items: [
                     {
-                        label: "learn",
+                        type: "doc",
+                        docId: "intro",
                         position: "right",
-                        items: [
-                            {
-                                href: "https://avodaq-dev.github.io/hyper-docs/",
-                                label: "hyperscope",
-                                rel: null,
-
-                            },
-                            {
-                                href: "https://avodaq-dev.github.io/hyper-docs/docs/intro/",
-                                label: "Docs",
-                                rel: null,
-
-                            },
-                            {
-                                href: "https://avodaq-dev.github.io/hyper-docs/blog/",
-                                label: "Changelog",
-                                rel: null,
-                            },
-
-                        ],
+                        label: "docs",
                     },
-                    {to: "blog", label: "about", position: "right"},
+                    {to: "blog", label: "news", position: "right"},
                     {to: "#section-contact", label: "contact", position: "right"},
                 ],
             },
@@ -125,7 +117,7 @@ const config = {
                         ],
                     },
                 ],
-                copyright: `<span id="contact">Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.</span>`,
+                // copyright: `<span id="contact">Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.</span>`,
             },
             prism: {
                 theme: lightCodeTheme,
