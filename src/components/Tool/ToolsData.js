@@ -1,7 +1,7 @@
 const React = require("react");
-export const DataProducts = [
+export const ToolsData = [
     {
-        title: "Product 1",
+        title: "Tool 1",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
         src: "https://picsum.photos/800/450?27",
         link: "test",
@@ -14,7 +14,7 @@ export const DataProducts = [
         tags: ["react", "javascript", "game", "back-end"]
     },
     {
-        title: "Product 2",
+        title: "Tool 2",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
         src: "https://picsum.photos/800/450?28",
         link: "test",
@@ -27,7 +27,7 @@ export const DataProducts = [
         tags: ["javascript", "utility", "web"]
     },
     {
-        title: "Product 3",
+        title: "Tool 3",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
         src: "https://picsum.photos/800/450?29",
         link: "test",
@@ -40,7 +40,7 @@ export const DataProducts = [
         tags: ["react", "fullstack", "front-end", "back-end", "web", "mvc"]
     },
     {
-        title: "Product 4",
+        title: "Tool 4",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
         src: "https://picsum.photos/800/450?26",
         link: "test",
@@ -53,7 +53,7 @@ export const DataProducts = [
         tags: ["react", "javascript", "monaco", "front-end"]
     },
     {
-        title: "Product 5",
+        title: "Tool 5",
         // src: require("@site/static/img/undraw_docusaurus_mountain.src").default,
         src: "https://picsum.photos/800/450?25",
         link: "test",

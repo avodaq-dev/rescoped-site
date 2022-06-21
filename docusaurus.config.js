@@ -75,7 +75,7 @@ const config = {
                 items: [
                     {
                         type: "doc",
-                        docId: "intro",
+                        docId: "welcome",
                         position: "right",
                         label: "docs",
                     },
@@ -112,7 +112,7 @@ const config = {
                             },
                             {
                                 label: "GitHub",
-                                href: "https://github.com/facebook/docusaurus",
+                                href: "https://github.com/avodaq/rescoped",
                             },
                         ],
                     },

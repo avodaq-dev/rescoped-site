@@ -5,7 +5,7 @@ export const DataFeatures = [
         Svg: require("@site/static/img/ico_reliable.svg").default,
         description: (
             <>
-                We go the extra mile to ensure a top-notch products and developer experience. Our solutions are always
+                We go the extra mile to ensure a top-notch tools and developer experience. Our solutions are always
                 optimized to ensure the best code quality, strictly typed and thoroughly tested. This way, you can be
                 confident that our
                 solutions will perform exactly as expected.

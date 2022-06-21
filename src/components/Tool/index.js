@@ -5,25 +5,24 @@ import Button from "../Button";
 // https://codepen.io/nregard/pen/KGbvoG
 
 
-export default function Product({productData, index}) {
-
+export default function Tool({toolsData, index}) {
     return (
         <div className={"h-full opacity-90 hover:opacity-100 transition-all ease-in-out rounded-md"}>
             <li key={index} className="h-full rounded-lg shadow-lg bg-avo-blue-800/70">
                 <figure>
                     <picture className="relative">
-                        <img className="rounded-t-lg" alt={`${productData.title} image`} loading="lazy"
-                            src={productData.src}/>
+                        <img className="rounded-t-lg" alt={`${toolsData.title} image`} loading="lazy"
+                            src={toolsData.src}/>
                         <div className="absolute -bottom-7 right-4">
-                            <Button text={"Open"} link={productData.link}/>
+                            <Button text={"Open"} link={toolsData.link}/>
                         </div>
                     </picture>
 
                     <div className="flex flex-col gap-4 p-6 h-full">
-                        <figcaption className="text-xl font-medium">{productData.title}</figcaption>
-                        <p className="text-base">{productData.description}</p>
+                        <figcaption className="text-xl font-medium">{toolsData.title}</figcaption>
+                        <p className="text-base">{toolsData.description}</p>
                         <div className="flex gap-3 flex-wrap mt-2">
-                            {productData.tags.map((tag, index) => {
+                            {toolsData.tags.map((tag, index) => {
                                 return (
                                     <div
                                         key={`tag-${index}`}

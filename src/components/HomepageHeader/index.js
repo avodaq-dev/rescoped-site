@@ -32,13 +32,13 @@ export default function HomepageHeader() {
                                 Make good even better
                             </p>
                         </div>
-
                         <h2 className="text-3xl sm:text-4xl md:text-6xl !leading-tight font-normal md:font-light pr-8 sm:pr-16">
                             Advanced tooling for <br className='hidden md:block'/> cutting edge engineers.
                         </h2>
                         <div className='flex flex-col sm:flex-row gap-8 text-center sm:text-left'>
-                            <Button text={"Solutions"} link={"#section-front-back"}/>
-                            <Button text={"About rescoped"} link={"#section-about"}/>
+                            <Button text={"Features"} link={"#section-features"}/>
+                            <Button text={"Tools"} link={"#section-tools"}/>
+                            <Button text={"Open Source"} link={"#section-os"}/>
                         </div>
                     </Reveal>
 
@@ -51,7 +51,7 @@ export default function HomepageHeader() {
                                 <ReLogoWhite title="rescoped Logo" className={clsx("relogo mt-auto", lightThemehide)}/>
                             </h1>
                             <p className={clsx("font-bold text-xl absolute bottom-5 sm:top-0 right-0 sm:-mr-3", styles.md_verticalLR)}>
-                                Give us a star on <a href="">GitHub</a>!
+                                Give us a star on <a href="https://github.com/avodaq/rescoped" target="_blank">GitHub</a>!
                             </p>
                         </Fade>
                     </div>

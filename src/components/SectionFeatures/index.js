@@ -17,7 +17,7 @@ function Feature({Svg, title, description}) {
 export default function SectionFeatures() {
     return (
         <>
-            <article className='grid grid-cols-3 gap-16 article-grid'>
+            <section className='grid grid-cols-3 gap-16 article-grid' id={"section-features"}>
                 <Reveal keyframes={customKeyframes} {...fadeUpProps} className={"col-span-3 ease-out"}>
                     <h2 className="text-3xl sm:text-6xl !leading-tight font-medium sm:font-light pr-8 sm:pr-16">
                         We got <br/>
@@ -28,13 +28,12 @@ export default function SectionFeatures() {
                     ))}
 
                     <div className="flex flex-col sm:flex-row gap-16">
-                        <p className='text-lg'>You would like to know in detail <br/> how we help you achieve your
-                            goals?</p>
-                        <Button text="Read more" link="#fontend-solutions"
+                        <p className='text-lg'>You would like to know in detail <br/> how to work with our tools?</p>
+                        <Button text="Read the docs" link="/docs/welcome/"
                             colorOverride="shadow-avo-green-green/20 bg-avo-green-green"/>
                     </div>
                 </Reveal>
-            </article>
+            </section>
         </>
     );
 }

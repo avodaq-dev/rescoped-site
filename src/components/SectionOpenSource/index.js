@@ -5,7 +5,7 @@ import Button from "@site/src/components/Button";
 
 export default function SectionOpenSource() {
     return (
-        <section className="px-4 sm:px-16 mx-auto py-32" id="section-about">
+        <section className="px-4 sm:px-16 mx-auto py-32" id="section-os">
             <article className='flex flex-col gap-16 lg:gap-24'>
                 <Reveal keyframes={customKeyframes} {...fadeUpProps} className={"col-span-3 ease-out"}>
                     <h2 className="text-3xl sm:text-6xl !leading-tight font-medium sm:font-light pr-8 sm:pr-16">
@@ -23,7 +23,7 @@ export default function SectionOpenSource() {
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-16">
-                        <p className='text-lg'>Still not convinced yet? <br/> These are just a few benefits!</p>
+                        <p className='text-lg'>Still not convinced yet? <br/> Read about our Philosophy!</p>
                         <Button text={"Read more"} link={"/blog/"}/>
                     </div>
                 </Reveal>
